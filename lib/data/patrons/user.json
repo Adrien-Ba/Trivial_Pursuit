@@ -1,0 +1,11 @@
+{
+  "model_name": "user",
+  "additionals": ["copyWith", "json", "equatable"],
+  "style": "freezed",
+  "properties": [
+    { "name":  "id", "type":  "int"},
+    { "name":  "firstname", "type": "String"},
+    { "name":  "lastname", "type": "String"},
+    { "name":  "age", "type": "int"}
+  ]
+}
