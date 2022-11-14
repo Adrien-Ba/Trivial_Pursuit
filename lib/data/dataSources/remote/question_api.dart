@@ -22,7 +22,7 @@ class QuestionApi {
     final response = await http.get(uri);
     if(response.statusCode == 200) {
       Question question = Question.fromJson(jsonDecode(response.body));
-      return question
+      return question;
     } else {
       throw Exception("Failed to load words");
     }
