@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:swiping_card_deck/swiping_card_deck.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
 import 'package:trivial_pursuit/data/repositories/question_repository.dart';
 import 'package:trivial_pursuit/ui/pages/home/game/bloc/game_state.dart';
@@ -19,15 +20,31 @@ class _GamePageState extends State<GamePage> {
   List<Question> _questions = [];
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<GameCubit, GameState>(
+    return RepositoryProvider(create: (context) => QuestionRepository.get(),
+    child: BlocProvider(create: (context) {
+      cubit = GameCubit(repository:
+      RepositoryProvider.of<QuestionRepository>(context));
+      return cubit!..fetchWord();
+    }, child : BlocConsumer<GameCubit, GameState>(
       listener: (context, state) {},
       builder: (context, state) {
         if (state is Loaded) {
+          SwipingCardDeck(
+            cardDeck: _questions.map((e){
+              return Card(...);
+            }).toList();
+            onDeckEmpty: () => debugPrint('Card empty'),
+            onRightSwipe:,
+            onLeftSwipe: ,
+        ),
+          )
           return const Text("Henri");
         }
         return const Text("chargment");
       },
     );
+    ));
+
   }
 
   void createQuestion(Question question) {
