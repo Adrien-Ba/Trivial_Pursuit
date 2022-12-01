@@ -1,9 +1,16 @@
-import '../entities/question.dart';
+import 'package:trivial_pursuit/data/dataSources/remote/question_api.dart';
+import 'package:trivial_pursuit/data/entities/list_questions.dart';
+import 'package:trivial_pursuit/data/entities/question.dart';
+
 
 class QuestionRepository {
   static QuestionRepository? _instance;
+  static QuestionApi? _questionApi;
 
-  static QuestionRepository getInstance() {
+
+
+  static QuestionRepository get() {
+    _questionApi ??= QuestionApi.getInstance();
     _instance ??= QuestionRepository._();
     return _instance!;
   }
@@ -12,8 +19,8 @@ class QuestionRepository {
 
   //final Question
 
-  Future<List<Question>> getQuestionsOfTheDay() async {
-    QuestionApiResponse response = await _questionFirestore.get();
+  /*Future<List<ListQuestions>> getQuestionsOfTheDay() async {
+     ListQuestions?  response = await _questionFirestore?.get();
     if(response.date == _getDate()) {
       return response.results!;
     } else {
@@ -26,5 +33,11 @@ class QuestionRepository {
       //put objectToReturn a firestore
       return questions;
     }
+  }*/
+
+  Future<ListQuestions> getQuestionsOfTheDay() async {
+    ListQuestions? questions = await _questionApi?.getQuestions();
+    return questions!;
   }
+
 }

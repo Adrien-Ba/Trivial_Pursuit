@@ -1,10 +1,9 @@
 {
-  "model_name": "questions",
+  "model_name": "list_questions",
   "additionals": ["copyWith", "json", "equatable"],
   "style": "freezed",
   "relations": [{ "name": "question" }],
   "properties": [
-    { "name": "response_code", "type": "int" },
     { "name": "results", "type": "List<Question>" }
   ]
 }

@@ -1,27 +1,21 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
 import 'package:trivial_pursuit/data/repositories/question_repository.dart';
-import 'package:trivial_pursuit/ui/pages/home/game/bloc/question_state_v2.dart';
+import 'package:trivial_pursuit/ui/pages/home/game/bloc/game_state.dart';
 
 
-class GameCubit extends Cubit<QuestionState> {
+class GameCubit extends Cubit<GameState> {
   final QuestionRepository repository;
 
-  late Question _lastQuestion;
+  GameCubit({required this.repository}) : super(const Loading());
 
-  int _score = 0;
-  String selectedAnswer = '';
-
-  GameCubit({required this.repository}) : super(Loading());
-
-  setAnswer(String answer) {
-    selectedAnswer = answer;
-    emit(AnswerSelected(answer));
+  void loadQuestions() async {
+    try {
+      final listQuestions = await repository.getQuestionsOfTheDay();
+      emit(Loaded(questions: listQuestions));
+    } catch (e) {
+      emit(Error(e.toString()));
+    }
   }
 
-  onCardSwiped(Question question) {...}
-
-  Future<void> fetchWord() async {
-    emit(Loading());
-  }
 }

@@ -1,31 +1,29 @@
 import 'dart:convert';
 
+import 'package:trivial_pursuit/data/entities/list_questions.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
 import 'package:http/http.dart' as http;
+import 'dart:convert' as convert;
 
 class QuestionApi {
-  final String _baseUrl = "opentdb.com";
-
-  static QuestionApi? _instance;
-
-  static getInstance() {
-    _instance ??=QuestionApi._();
-    return _instance!;
-  }
-
+  static QuestionApi? _instanceQuestionApi;
   QuestionApi._();
 
-  Future<Question> getQuestionsOfTheDay() async {
-    final queryParameters = {'amount': '10'};
-    final uri = Uri.https(_baseUrl, '/api.php', queryParameters);
-
-    final response = await http.get(uri);
-    if(response.statusCode == 200) {
-      Question question = Question.fromJson(jsonDecode(response.body));
-      return question;
-    } else {
-      throw Exception("Failed to load words");
-    }
+  static QuestionApi getInstance() {
+    _instanceQuestionApi ??= QuestionApi._();
+    return _instanceQuestionApi!;
   }
 
+
+  var url =
+  Uri.https('opentdb.com', '/api.php', {'amount': '{10}'});
+
+  Future<ListQuestions?> getQuestions() async {
+    var responseApi = await http.get(url);
+    if (responseApi.statusCode == 200) {
+      final questions = ListQuestions.fromJson(responseApi.body as Map<String, dynamic>);
+      return questions;
+    }
+    return null;
+  }
 }
