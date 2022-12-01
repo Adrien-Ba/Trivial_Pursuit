@@ -22,7 +22,7 @@ class _GamePageState extends State<GamePage> {
   Widget build(BuildContext context) {
     return RepositoryProvider(create: (context) => QuestionRepository.get(),
     child: BlocProvider(create: (context) {
-      cubit = GameCubit(repository:
+      var cubit = GameCubit(repository:
       RepositoryProvider.of<QuestionRepository>(context));
       return cubit!..fetchWord();
     }, child : BlocConsumer<GameCubit, GameState>(
@@ -31,18 +31,17 @@ class _GamePageState extends State<GamePage> {
         if (state is Loaded) {
           SwipingCardDeck(
             cardDeck: _questions.map((e){
-              return Card(...);
-            }).toList();
-            onDeckEmpty: () => debugPrint('Card empty'),
-            onRightSwipe:,
-            onLeftSwipe: ,
-        ),
-          )
+              return Card();
+            }).toList(),
+              onLeftSwipe: (Card ) {  },
+              onRightSwipe: (Card ) {  },
+              onDeckEmpty: () { debugPrint('Card empty'); }, cardWidth: 0.0,
+
+        );
+          }
           return const Text("Henri");
         }
-        return const Text("chargment");
-      },
-    );
+    )
     ));
 
   }
