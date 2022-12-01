@@ -15,7 +15,7 @@ class QuestionApi {
 
   QuestionApi._();
 
-  Future<List<Question>> getQuestionsOfTheDay() async {
+  Future<Question> getQuestionsOfTheDay() async {
     final queryParameters = {'amount': '10'};
     final uri = Uri.https(_baseUrl, '/api.php', queryParameters);
 

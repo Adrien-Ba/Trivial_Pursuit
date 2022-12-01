@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trivial_pursuit/ui/pages/home/classement/classement_page.dart';
+import 'package:trivial_pursuit/ui/pages/home/game/game_page.dart';
 import 'package:trivial_pursuit/ui/pages/home/profile/profile_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _HomePageState extends State<HomePage> {
 
   int _currentIndex = 0;
   List<Widget> _content = [
-    Text('Accueil'),
+    GamePage(),
     ClassementPage(),
     Profile(),
     //OutlinedButton(onPressed: () {
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
     //},
     //child: const Text('Je suis un bouton'))
   ];
-
+//ON peux utiliser des cards & swippingcarddeck
   @override
   Widget build(BuildContext context) {
     return Scaffold(
