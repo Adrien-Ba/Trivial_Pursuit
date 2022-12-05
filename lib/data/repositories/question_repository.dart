@@ -18,8 +18,8 @@ class QuestionRepository {
   QuestionRepository._();
 
   //final Question
-
-  /*Future<List<ListQuestions>> getQuestionsOfTheDay() async {
+/*
+  Future<List<ListQuestions>> getQuestionsOfTheDay() async {
      ListQuestions?  response = await _questionFirestore?.get();
     if(response.date == _getDate()) {
       return response.results!;
@@ -33,7 +33,9 @@ class QuestionRepository {
       //put objectToReturn a firestore
       return questions;
     }
-  }*/
+  }
+
+ */
 
   Future<ListQuestions> getQuestionsOfTheDay() async {
     ListQuestions? questions = await _questionApi?.getQuestions();

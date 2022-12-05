@@ -18,32 +18,38 @@ class _GamePageState extends State<GamePage> {
   int _currentIndex = 0;
   List<String> _currentResponse = [];
   List<Question> _questions = [];
+
   @override
   Widget build(BuildContext context) {
-    return RepositoryProvider(create: (context) => QuestionRepository.get(),
-    child: BlocProvider(create: (context) {
-      var cubit = GameCubit(repository:
-      RepositoryProvider.of<QuestionRepository>(context));
-      return cubit!..fetchWord();
-    }, child : BlocConsumer<GameCubit, GameState>(
-      listener: (context, state) {},
-      builder: (context, state) {
-        if (state is Loaded) {
-          SwipingCardDeck(
-            cardDeck: _questions.map((e){
-              return Card();
-            }).toList(),
-              onLeftSwipe: (Card ) {  },
-              onRightSwipe: (Card ) {  },
-              onDeckEmpty: () { debugPrint('Card empty'); }, cardWidth: 0.0,
-
-        );
-          }
-          return const Text("Henri");
-        }
-    )
-    ));
-
+    return RepositoryProvider(
+        create: (context) => QuestionRepository.get(),
+        child: BlocProvider(
+            create: (context) {
+              var cubit = GameCubit(
+                  repository:
+                      RepositoryProvider.of<QuestionRepository>(context));
+              return cubit!..fetchWord();
+            },
+            child: BlocConsumer<GameCubit, GameState>(
+                listener: (context, state) {},
+                builder: (context, state) {
+                  if (state is Loaded) {
+                    SwipingCardDeck(
+                      cardDeck: _questions.map((e) {
+                        return const Card(
+                          child: Text("aa"),
+                        );
+                      }).toList(),
+                      onLeftSwipe: (Card) {},
+                      onRightSwipe: (Card) {},
+                      onDeckEmpty: () {
+                        debugPrint('Card empty');
+                      },
+                      cardWidth: 50,
+                    );
+                  }
+                  return const Text("Henri");
+                })));
   }
 
   void createQuestion(Question question) {
@@ -52,4 +58,3 @@ class _GamePageState extends State<GamePage> {
       ..toList();
   }
 }
-

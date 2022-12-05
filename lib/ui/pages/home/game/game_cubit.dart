@@ -3,7 +3,6 @@ import 'package:trivial_pursuit/data/entities/question.dart';
 import 'package:trivial_pursuit/data/repositories/question_repository.dart';
 import 'package:trivial_pursuit/ui/pages/home/game/bloc/game_state.dart';
 
-
 class GameCubit extends Cubit<GameState> {
   final QuestionRepository repository;
 
@@ -19,5 +18,4 @@ class GameCubit extends Cubit<GameState> {
   }
 
   fetchWord() {}
-
 }
