@@ -9,11 +9,13 @@ part of 'list_questions.dart';
 _$_ListQuestions _$$_ListQuestionsFromJson(Map<String, dynamic> json) =>
     _$_ListQuestions(
       results: (json['results'] as List<dynamic>)
-          .map((e) => Question.fromJson(e as Map<String, dynamic>))
+          .map((e) => Question.fromJson(e))
           .toList(),
     );
 
 Map<String, dynamic> _$$_ListQuestionsToJson(_$_ListQuestions instance) =>
     <String, dynamic>{
-      'results': instance.results,
+      'results': instance.results
+          .map((e) =>  e.toJson())
+          .toList()
     };

@@ -28,7 +28,7 @@ class _GamePageState extends State<GamePage> {
               var cubit = GameCubit(
                   repository:
                       RepositoryProvider.of<QuestionRepository>(context));
-              return cubit!..fetchWord();
+              return cubit!..loadQuestions();
             },
             child: BlocConsumer<GameCubit, GameState>(
                 listener: (context, state) {},

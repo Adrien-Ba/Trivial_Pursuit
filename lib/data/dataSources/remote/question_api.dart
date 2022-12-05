@@ -16,12 +16,12 @@ class QuestionApi {
 
 
   var url =
-  Uri.https('opentdb.com', '/api.php', {'amount': '{10}'});
+  Uri.parse('https://opentdb.com/api.php?amount=20');
 
   Future<ListQuestions?> getQuestions() async {
     var responseApi = await http.get(url);
     if (responseApi.statusCode == 200) {
-      final questions = ListQuestions.fromJson(responseApi.body as Map<String, dynamic>);
+      final questions = ListQuestions.fromJson(convert.jsonDecode(responseApi.body));
       return questions;
     }
     return null;

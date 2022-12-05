@@ -17,5 +17,4 @@ class GameCubit extends Cubit<GameState> {
     }
   }
 
-  fetchWord() {}
 }
