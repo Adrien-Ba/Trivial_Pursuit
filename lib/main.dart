@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:trivial_pursuit/firebase_options.dart';
 import 'package:trivial_pursuit/ui/pages/home/home_page.dart';
 
@@ -14,15 +15,30 @@ void main() async{
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({Key? key}) : super(key: key);
 
-
+  final _router = GoRouter(
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const SignUpPage(),
+      ),
+      GoRoute(
+        path: '/test/:name',
+        name:'test',
+        builder:(context,state) {
+          String name = state.params['name']!;
+          return MyHomePage(title: name);
+        }
+      ),
+    ]
+  );
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return MaterialApp.router(
+      title: 'Trivial Pursuit',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -35,7 +51,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(), //APPELER ICI SA PAGE A AFFICHER EN DEBUT D'APP
+      routeInformationProvider: _router.routeInformationProvider,
+      routeInformationParser: _router.routeInformationParser,
+      routerDelegate: _router.routerDelegate,
+      backButtonDispatcher: _router.backButtonDispatcher,
+      //home: const HomePage(), //APPELER ICI SA PAGE A AFFICHER EN DEBUT D'APP
     );
   }
 }
