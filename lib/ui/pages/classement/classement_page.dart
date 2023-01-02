@@ -30,10 +30,10 @@ class _ClassementPageState extends State<ClassementPage> {
             child: ListView.separated(
                 itemBuilder: (context, index) {
                   if(index%2==0) {
-                    return ListTile(title: Text(_liste[index]), tileColor: Colors.grey[200],);
+                    return Material(child: ListTile(title: Text(_liste[index]), tileColor: Colors.grey[200],));
                   }
                   else {
-                    return ListTile(title: Text(_liste[index]), tileColor: Colors.grey[300],);
+                    return Material(child: ListTile(title: Text(_liste[index]), tileColor: Colors.grey[300],));
                   }
                 },
                 separatorBuilder: (context, index) {

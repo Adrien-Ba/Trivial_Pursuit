@@ -23,6 +23,6 @@ Map<String, dynamic> _$$_QuestionToJson(_$_Question instance) =>
       'type': instance.type,
       'difficulty': instance.difficulty,
       'question': instance.question,
-      'correctAnswer': instance.correctAnswer,
-      'incorrectAnswers': instance.incorrectAnswers,
+      'correct_answer': instance.correctAnswer,
+      'incorrect_answers': instance.incorrectAnswers,
     };

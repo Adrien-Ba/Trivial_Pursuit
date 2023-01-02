@@ -29,8 +29,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Home Page'),
       ),
-      body: Center(
-        child: _content[_currentIndex],
+      body: IndexedStack(
+        index: _currentIndex,
+        children: _content,
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,

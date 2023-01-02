@@ -38,12 +38,20 @@ class _LoginPageState extends State<LoginPage> {
             return _loginCubit!;
           },
           child: BlocConsumer<LoginCubit, LoginState>(
-            listener: (context, state) {},
+            listener: (context, state) => state.maybeMap(
+              correct: (value) => context.go("/game"),
+              orElse: () => null,
+            ),
             builder: (context, state) {
-              if(state is Initial) {
+              if (state is Initial) {
                 return Scaffold(
                   body: Column(
                     children: [
+                      TextField(
+                        decoration: InputDecoration(
+                          labelText: "Email",
+                        ),
+                      ),
                       TextField(
                         controller: emailController,
                         decoration: InputDecoration(
@@ -58,42 +66,11 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          _loginCubit!.signIn(
-                              "adrien.bassail@live.fr", "123456");
+                          _loginCubit!
+                              //.signIn(emailController.text, passwordController.text);
+                          .signIn("toto@toto.fr", "totototo");
                           //_loginCubit!.logout();
                         },
-
-                        child: Text("Se connecter"),
-                      )
-                    ],
-                  ),
-                );
-              }
-              if(state is Correct) {
-                return Scaffold(
-                  body: Column(
-                    children: [
-                      TextField(
-                        controller: emailController,
-                        decoration: InputDecoration(
-                          labelText: "Email",
-                        ),
-                      ),
-                      TextField(
-                        controller: emailController,
-                        decoration: InputDecoration(
-                          labelText: "Email",
-                        ),
-                      ),
-                      TextField(
-                        controller: emailController,
-                        decoration: InputDecoration(
-                          labelText: "Email",
-                        ),
-                      ),
-                      ElevatedButton(
-                        onPressed: () => context.go("/game"),
-
                         child: Text("Se connecter"),
                       )
                     ],

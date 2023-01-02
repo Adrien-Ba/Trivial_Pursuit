@@ -67,24 +67,26 @@ class _GamePageState extends State<GamePage> {
                       },
                       cardWidth: 50,
                     );
-                    return Column(
-                      children: [
-                        _swipingDeck!,
-                        Column(
-                          children:
-                              shuffleAnswers(_questions[_currentIndex]).map(
-                            (e) {
-                              return ElevatedButton(
-                                  onPressed: () {
-                                    isCorrectAnswer(e);
-                                    _swipingDeck!.swipeRight();
-                                  },
-                                  child: Text(e));
-                            },
-                          ).toList(),
-                        )
-                      ],
-                    );
+                    return ListView(children: [
+                      Column(
+                        children: [
+                          _swipingDeck!,
+                          Column(
+                            children:
+                                shuffleAnswers(_questions[_currentIndex]).map(
+                              (e) {
+                                return ElevatedButton(
+                                    onPressed: () {
+                                      isCorrectAnswer(e);
+                                      _swipingDeck!.swipeRight();
+                                    },
+                                    child: Text(e));
+                              },
+                            ).toList(),
+                          )
+                        ],
+                      ),
+                    ]);
                   }
                   return const Text("Henri");
                 })));

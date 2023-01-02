@@ -23,12 +23,12 @@ class QuestionRepository {
   //final Question
 
   Future<ListQuestions> getQuestionsOfTheDay() async {
-     ListQuestions?  response = await _questionFirebase?.get();
+     ListQuestions?  response = await _questionFirebase!.get();
      if(response != null) {
        return response;
      }
      else {
-       ListQuestions? questions = await _questionApi?.getQuestions();
+       ListQuestions? questions = await _questionApi!.getQuestions();
        _questionFirebase!.insertQuestions(questions!);
       //TODO supprimer les données avant envoi
       //QuestionApiResponse objectToReturn = QuestionApiResponse(

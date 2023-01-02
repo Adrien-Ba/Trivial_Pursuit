@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'game_state.dart';
 
@@ -29,13 +29,13 @@ mixin _$GameState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(ListQuestions questions)? loader,
-    TResult Function(String message)? error,
-    TResult Function(String answer)? answerSelected,
-    TResult Function()? goodAnswer,
-    TResult Function()? wrongAnswer,
-    TResult Function(Question q)? currentQuestion,
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,13 +63,13 @@ mixin _$GameState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loader,
-    TResult Function(Error value)? error,
-    TResult Function(AnswerSelected value)? answerSelected,
-    TResult Function(GoodAnswer value)? goodAnswer,
-    TResult Function(WrongAnswer value)? wrongAnswer,
-    TResult Function(currentQuestion value)? currentQuestion,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,16 +89,18 @@ mixin _$GameState {
 /// @nodoc
 abstract class $GameStateCopyWith<$Res> {
   factory $GameStateCopyWith(GameState value, $Res Function(GameState) then) =
-      _$GameStateCopyWithImpl<$Res>;
+      _$GameStateCopyWithImpl<$Res, GameState>;
 }
 
 /// @nodoc
-class _$GameStateCopyWithImpl<$Res> implements $GameStateCopyWith<$Res> {
+class _$GameStateCopyWithImpl<$Res, $Val extends GameState>
+    implements $GameStateCopyWith<$Res> {
   _$GameStateCopyWithImpl(this._value, this._then);
 
-  final GameState _value;
   // ignore: unused_field
-  final $Res Function(GameState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -108,13 +110,11 @@ abstract class _$$LoadingCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$LoadingCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
+class __$$LoadingCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$Loading>
     implements _$$LoadingCopyWith<$Res> {
   __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
-      : super(_value, (v) => _then(v as _$Loading));
-
-  @override
-  _$Loading get _value => super._value as _$Loading;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -153,13 +153,13 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(ListQuestions questions)? loader,
-    TResult Function(String message)? error,
-    TResult Function(String answer)? answerSelected,
-    TResult Function()? goodAnswer,
-    TResult Function()? wrongAnswer,
-    TResult Function(Question q)? currentQuestion,
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
   }) {
     return loading?.call();
   }
@@ -199,13 +199,13 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loader,
-    TResult Function(Error value)? error,
-    TResult Function(AnswerSelected value)? answerSelected,
-    TResult Function(GoodAnswer value)? goodAnswer,
-    TResult Function(WrongAnswer value)? wrongAnswer,
-    TResult Function(currentQuestion value)? currentQuestion,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
   }) {
     return loading?.call(this);
   }
@@ -237,26 +237,26 @@ abstract class Loading implements GameState {
 abstract class _$$LoadedCopyWith<$Res> {
   factory _$$LoadedCopyWith(_$Loaded value, $Res Function(_$Loaded) then) =
       __$$LoadedCopyWithImpl<$Res>;
+  @useResult
   $Res call({ListQuestions questions});
 
   $ListQuestionsCopyWith<$Res> get questions;
 }
 
 /// @nodoc
-class __$$LoadedCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
+class __$$LoadedCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$Loaded>
     implements _$$LoadedCopyWith<$Res> {
   __$$LoadedCopyWithImpl(_$Loaded _value, $Res Function(_$Loaded) _then)
-      : super(_value, (v) => _then(v as _$Loaded));
+      : super(_value, _then);
 
-  @override
-  _$Loaded get _value => super._value as _$Loaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? questions = freezed,
+    Object? questions = null,
   }) {
     return _then(_$Loaded(
-      questions: questions == freezed
+      questions: null == questions
           ? _value.questions
           : questions // ignore: cast_nullable_to_non_nullable
               as ListQuestions,
@@ -264,6 +264,7 @@ class __$$LoadedCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ListQuestionsCopyWith<$Res> get questions {
     return $ListQuestionsCopyWith<$Res>(_value.questions, (value) {
       return _then(_value.copyWith(questions: value));
@@ -289,15 +290,16 @@ class _$Loaded implements Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Loaded &&
-            const DeepCollectionEquality().equals(other.questions, questions));
+            (identical(other.questions, questions) ||
+                other.questions == questions));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(questions));
+  int get hashCode => Object.hash(runtimeType, questions);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$LoadedCopyWith<_$Loaded> get copyWith =>
       __$$LoadedCopyWithImpl<_$Loaded>(this, _$identity);
 
@@ -318,13 +320,13 @@ class _$Loaded implements Loaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(ListQuestions questions)? loader,
-    TResult Function(String message)? error,
-    TResult Function(String answer)? answerSelected,
-    TResult Function()? goodAnswer,
-    TResult Function()? wrongAnswer,
-    TResult Function(Question q)? currentQuestion,
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
   }) {
     return loader?.call(questions);
   }
@@ -364,13 +366,13 @@ class _$Loaded implements Loaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loader,
-    TResult Function(Error value)? error,
-    TResult Function(AnswerSelected value)? answerSelected,
-    TResult Function(GoodAnswer value)? goodAnswer,
-    TResult Function(WrongAnswer value)? wrongAnswer,
-    TResult Function(currentQuestion value)? currentQuestion,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
   }) {
     return loader?.call(this);
   }
@@ -407,24 +409,23 @@ abstract class Loaded implements GameState {
 abstract class _$$ErrorCopyWith<$Res> {
   factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
       __$$ErrorCopyWithImpl<$Res>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
+class __$$ErrorCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res, _$Error>
     implements _$$ErrorCopyWith<$Res> {
   __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
-      : super(_value, (v) => _then(v as _$Error));
+      : super(_value, _then);
 
-  @override
-  _$Error get _value => super._value as _$Error;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_$Error(
-      message == freezed
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -450,15 +451,15 @@ class _$Error implements Error {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Error &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ErrorCopyWith<_$Error> get copyWith =>
       __$$ErrorCopyWithImpl<_$Error>(this, _$identity);
 
@@ -479,13 +480,13 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(ListQuestions questions)? loader,
-    TResult Function(String message)? error,
-    TResult Function(String answer)? answerSelected,
-    TResult Function()? goodAnswer,
-    TResult Function()? wrongAnswer,
-    TResult Function(Question q)? currentQuestion,
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
   }) {
     return error?.call(message);
   }
@@ -525,13 +526,13 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loader,
-    TResult Function(Error value)? error,
-    TResult Function(AnswerSelected value)? answerSelected,
-    TResult Function(GoodAnswer value)? goodAnswer,
-    TResult Function(WrongAnswer value)? wrongAnswer,
-    TResult Function(currentQuestion value)? currentQuestion,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
   }) {
     return error?.call(this);
   }
@@ -568,25 +569,25 @@ abstract class _$$AnswerSelectedCopyWith<$Res> {
   factory _$$AnswerSelectedCopyWith(
           _$AnswerSelected value, $Res Function(_$AnswerSelected) then) =
       __$$AnswerSelectedCopyWithImpl<$Res>;
+  @useResult
   $Res call({String answer});
 }
 
 /// @nodoc
-class __$$AnswerSelectedCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
+class __$$AnswerSelectedCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$AnswerSelected>
     implements _$$AnswerSelectedCopyWith<$Res> {
   __$$AnswerSelectedCopyWithImpl(
       _$AnswerSelected _value, $Res Function(_$AnswerSelected) _then)
-      : super(_value, (v) => _then(v as _$AnswerSelected));
+      : super(_value, _then);
 
-  @override
-  _$AnswerSelected get _value => super._value as _$AnswerSelected;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? answer = freezed,
+    Object? answer = null,
   }) {
     return _then(_$AnswerSelected(
-      answer == freezed
+      null == answer
           ? _value.answer
           : answer // ignore: cast_nullable_to_non_nullable
               as String,
@@ -612,15 +613,15 @@ class _$AnswerSelected implements AnswerSelected {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AnswerSelected &&
-            const DeepCollectionEquality().equals(other.answer, answer));
+            (identical(other.answer, answer) || other.answer == answer));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(answer));
+  int get hashCode => Object.hash(runtimeType, answer);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$AnswerSelectedCopyWith<_$AnswerSelected> get copyWith =>
       __$$AnswerSelectedCopyWithImpl<_$AnswerSelected>(this, _$identity);
 
@@ -641,13 +642,13 @@ class _$AnswerSelected implements AnswerSelected {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(ListQuestions questions)? loader,
-    TResult Function(String message)? error,
-    TResult Function(String answer)? answerSelected,
-    TResult Function()? goodAnswer,
-    TResult Function()? wrongAnswer,
-    TResult Function(Question q)? currentQuestion,
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
   }) {
     return answerSelected?.call(answer);
   }
@@ -687,13 +688,13 @@ class _$AnswerSelected implements AnswerSelected {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loader,
-    TResult Function(Error value)? error,
-    TResult Function(AnswerSelected value)? answerSelected,
-    TResult Function(GoodAnswer value)? goodAnswer,
-    TResult Function(WrongAnswer value)? wrongAnswer,
-    TResult Function(currentQuestion value)? currentQuestion,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
   }) {
     return answerSelected?.call(this);
   }
@@ -734,14 +735,12 @@ abstract class _$$GoodAnswerCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$GoodAnswerCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
+class __$$GoodAnswerCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$GoodAnswer>
     implements _$$GoodAnswerCopyWith<$Res> {
   __$$GoodAnswerCopyWithImpl(
       _$GoodAnswer _value, $Res Function(_$GoodAnswer) _then)
-      : super(_value, (v) => _then(v as _$GoodAnswer));
-
-  @override
-  _$GoodAnswer get _value => super._value as _$GoodAnswer;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -780,13 +779,13 @@ class _$GoodAnswer implements GoodAnswer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(ListQuestions questions)? loader,
-    TResult Function(String message)? error,
-    TResult Function(String answer)? answerSelected,
-    TResult Function()? goodAnswer,
-    TResult Function()? wrongAnswer,
-    TResult Function(Question q)? currentQuestion,
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
   }) {
     return goodAnswer?.call();
   }
@@ -826,13 +825,13 @@ class _$GoodAnswer implements GoodAnswer {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loader,
-    TResult Function(Error value)? error,
-    TResult Function(AnswerSelected value)? answerSelected,
-    TResult Function(GoodAnswer value)? goodAnswer,
-    TResult Function(WrongAnswer value)? wrongAnswer,
-    TResult Function(currentQuestion value)? currentQuestion,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
   }) {
     return goodAnswer?.call(this);
   }
@@ -868,14 +867,12 @@ abstract class _$$WrongAnswerCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$WrongAnswerCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
+class __$$WrongAnswerCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$WrongAnswer>
     implements _$$WrongAnswerCopyWith<$Res> {
   __$$WrongAnswerCopyWithImpl(
       _$WrongAnswer _value, $Res Function(_$WrongAnswer) _then)
-      : super(_value, (v) => _then(v as _$WrongAnswer));
-
-  @override
-  _$WrongAnswer get _value => super._value as _$WrongAnswer;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -914,13 +911,13 @@ class _$WrongAnswer implements WrongAnswer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(ListQuestions questions)? loader,
-    TResult Function(String message)? error,
-    TResult Function(String answer)? answerSelected,
-    TResult Function()? goodAnswer,
-    TResult Function()? wrongAnswer,
-    TResult Function(Question q)? currentQuestion,
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
   }) {
     return wrongAnswer?.call();
   }
@@ -960,13 +957,13 @@ class _$WrongAnswer implements WrongAnswer {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loader,
-    TResult Function(Error value)? error,
-    TResult Function(AnswerSelected value)? answerSelected,
-    TResult Function(GoodAnswer value)? goodAnswer,
-    TResult Function(WrongAnswer value)? wrongAnswer,
-    TResult Function(currentQuestion value)? currentQuestion,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
   }) {
     return wrongAnswer?.call(this);
   }
@@ -999,6 +996,7 @@ abstract class _$$currentQuestionCopyWith<$Res> {
   factory _$$currentQuestionCopyWith(
           _$currentQuestion value, $Res Function(_$currentQuestion) then) =
       __$$currentQuestionCopyWithImpl<$Res>;
+  @useResult
   $Res call({Question q});
 
   $QuestionCopyWith<$Res> get q;
@@ -1006,21 +1004,19 @@ abstract class _$$currentQuestionCopyWith<$Res> {
 
 /// @nodoc
 class __$$currentQuestionCopyWithImpl<$Res>
-    extends _$GameStateCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$currentQuestion>
     implements _$$currentQuestionCopyWith<$Res> {
   __$$currentQuestionCopyWithImpl(
       _$currentQuestion _value, $Res Function(_$currentQuestion) _then)
-      : super(_value, (v) => _then(v as _$currentQuestion));
+      : super(_value, _then);
 
-  @override
-  _$currentQuestion get _value => super._value as _$currentQuestion;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? q = freezed,
+    Object? q = null,
   }) {
     return _then(_$currentQuestion(
-      q == freezed
+      null == q
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
               as Question,
@@ -1028,6 +1024,7 @@ class __$$currentQuestionCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuestionCopyWith<$Res> get q {
     return $QuestionCopyWith<$Res>(_value.q, (value) {
       return _then(_value.copyWith(q: value));
@@ -1053,15 +1050,15 @@ class _$currentQuestion implements currentQuestion {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$currentQuestion &&
-            const DeepCollectionEquality().equals(other.q, q));
+            (identical(other.q, q) || other.q == q));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(q));
+  int get hashCode => Object.hash(runtimeType, q);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$currentQuestionCopyWith<_$currentQuestion> get copyWith =>
       __$$currentQuestionCopyWithImpl<_$currentQuestion>(this, _$identity);
 
@@ -1082,13 +1079,13 @@ class _$currentQuestion implements currentQuestion {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(ListQuestions questions)? loader,
-    TResult Function(String message)? error,
-    TResult Function(String answer)? answerSelected,
-    TResult Function()? goodAnswer,
-    TResult Function()? wrongAnswer,
-    TResult Function(Question q)? currentQuestion,
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
   }) {
     return currentQuestion?.call(q);
   }
@@ -1128,13 +1125,13 @@ class _$currentQuestion implements currentQuestion {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loaded value)? loader,
-    TResult Function(Error value)? error,
-    TResult Function(AnswerSelected value)? answerSelected,
-    TResult Function(GoodAnswer value)? goodAnswer,
-    TResult Function(WrongAnswer value)? wrongAnswer,
-    TResult Function(currentQuestion value)? currentQuestion,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
   }) {
     return currentQuestion?.call(this);
   }

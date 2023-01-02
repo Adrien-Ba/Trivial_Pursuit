@@ -33,6 +33,7 @@ class QuestionFirebase {
     if(response.exists) {
       return response.data();
     }
+    return null;
   }
 
   Future<void> delete(String id) async {
