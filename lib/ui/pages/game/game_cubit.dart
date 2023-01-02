@@ -16,5 +16,4 @@ class GameCubit extends Cubit<GameState> {
       emit(Error(e.toString()));
     }
   }
-
 }

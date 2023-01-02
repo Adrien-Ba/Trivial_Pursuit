@@ -11,8 +11,8 @@ _$_Question _$$_QuestionFromJson(Map<String, dynamic> json) => _$_Question(
       type: json['type'] as String,
       difficulty: json['difficulty'] as String,
       question: json['question'] as String,
-      correctAnswer: json['correctAnswer'] as String,
-      incorrectAnswers: (json['incorrectAnswers'] as List<dynamic>)
+      correctAnswer: json['correct_answer'] as String,
+      incorrectAnswers: (json['incorrect_answers'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
     );

@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:trivial_pursuit/firebase_options.dart';
+import 'package:trivial_pursuit/ui/pages/game/game_page.dart';
 import 'package:trivial_pursuit/ui/pages/home/home_page.dart';
 import 'package:trivial_pursuit/ui/pages/login/login_page.dart';
 
@@ -32,6 +33,10 @@ class MyApp extends StatelessWidget {
           return MyHomePage(title: name);
         }
       ),
+      GoRoute(
+        path: "/game",
+        builder: (context, state) => HomePage(),
+      )
     ]
   );
 
