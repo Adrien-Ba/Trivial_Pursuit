@@ -15,6 +15,8 @@ class User with _$User {
     required String firstname,
     required String lastname,
     required int age,
+    required String email,
+    required int score
   }) = _User;
   
     /// Creates a User from Json map

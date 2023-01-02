@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'list_questions.dart';
 
@@ -31,33 +31,30 @@ mixin _$ListQuestions {
 /// @nodoc
 abstract class $ListQuestionsCopyWith<$Res> {
   factory $ListQuestionsCopyWith(
-      ListQuestions value, $Res Function(ListQuestions) then) =
-  _$ListQuestionsCopyWithImpl<$Res, ListQuestions>;
-  @useResult
+          ListQuestions value, $Res Function(ListQuestions) then) =
+      _$ListQuestionsCopyWithImpl<$Res>;
   $Res call({List<Question> results});
 }
 
 /// @nodoc
-class _$ListQuestionsCopyWithImpl<$Res, $Val extends ListQuestions>
+class _$ListQuestionsCopyWithImpl<$Res>
     implements $ListQuestionsCopyWith<$Res> {
   _$ListQuestionsCopyWithImpl(this._value, this._then);
 
+  final ListQuestions _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(ListQuestions) _then;
 
-  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = null,
+    Object? results = freezed,
   }) {
     return _then(_value.copyWith(
-      results: null == results
+      results: results == freezed
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-      as List<Question>,
-    ) as $Val);
+              as List<Question>,
+    ));
   }
 }
 
@@ -65,31 +62,32 @@ class _$ListQuestionsCopyWithImpl<$Res, $Val extends ListQuestions>
 abstract class _$$_ListQuestionsCopyWith<$Res>
     implements $ListQuestionsCopyWith<$Res> {
   factory _$$_ListQuestionsCopyWith(
-      _$_ListQuestions value, $Res Function(_$_ListQuestions) then) =
-  __$$_ListQuestionsCopyWithImpl<$Res>;
+          _$_ListQuestions value, $Res Function(_$_ListQuestions) then) =
+      __$$_ListQuestionsCopyWithImpl<$Res>;
   @override
-  @useResult
   $Res call({List<Question> results});
 }
 
 /// @nodoc
 class __$$_ListQuestionsCopyWithImpl<$Res>
-    extends _$ListQuestionsCopyWithImpl<$Res, _$_ListQuestions>
+    extends _$ListQuestionsCopyWithImpl<$Res>
     implements _$$_ListQuestionsCopyWith<$Res> {
   __$$_ListQuestionsCopyWithImpl(
       _$_ListQuestions _value, $Res Function(_$_ListQuestions) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$_ListQuestions));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$_ListQuestions get _value => super._value as _$_ListQuestions;
+
   @override
   $Res call({
-    Object? results = null,
+    Object? results = freezed,
   }) {
     return _then(_$_ListQuestions(
-      results: null == results
+      results: results == freezed
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
-      as List<Question>,
+              as List<Question>,
     ));
   }
 }
@@ -106,7 +104,6 @@ class _$_ListQuestions implements _ListQuestions {
   final List<Question> _results;
   @override
   List<Question> get results {
-    if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_results);
   }
@@ -131,7 +128,6 @@ class _$_ListQuestions implements _ListQuestions {
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$_ListQuestionsCopyWith<_$_ListQuestions> get copyWith =>
       __$$_ListQuestionsCopyWithImpl<_$_ListQuestions>(this, _$identity);
 
@@ -145,10 +141,10 @@ class _$_ListQuestions implements _ListQuestions {
 
 abstract class _ListQuestions implements ListQuestions {
   const factory _ListQuestions({required final List<Question> results}) =
-  _$_ListQuestions;
+      _$_ListQuestions;
 
   factory _ListQuestions.fromJson(Map<String, dynamic> json) =
-  _$_ListQuestions.fromJson;
+      _$_ListQuestions.fromJson;
 
   @override
   List<Question> get results;

@@ -24,6 +24,8 @@ mixin _$User {
   String get firstname => throw _privateConstructorUsedError;
   String get lastname => throw _privateConstructorUsedError;
   int get age => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
+  int get score => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +36,13 @@ mixin _$User {
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
-  $Res call({int id, String firstname, String lastname, int age});
+  $Res call(
+      {int id,
+      String firstname,
+      String lastname,
+      int age,
+      String email,
+      int score});
 }
 
 /// @nodoc
@@ -51,6 +59,8 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? firstname = freezed,
     Object? lastname = freezed,
     Object? age = freezed,
+    Object? email = freezed,
+    Object? score = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -69,6 +79,14 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -78,7 +96,13 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$$_UserCopyWith(_$_User value, $Res Function(_$_User) then) =
       __$$_UserCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String firstname, String lastname, int age});
+  $Res call(
+      {int id,
+      String firstname,
+      String lastname,
+      int age,
+      String email,
+      int score});
 }
 
 /// @nodoc
@@ -96,6 +120,8 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? firstname = freezed,
     Object? lastname = freezed,
     Object? age = freezed,
+    Object? email = freezed,
+    Object? score = freezed,
   }) {
     return _then(_$_User(
       id: id == freezed
@@ -114,6 +140,14 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -125,7 +159,9 @@ class _$_User implements _User {
       {required this.id,
       required this.firstname,
       required this.lastname,
-      required this.age});
+      required this.age,
+      required this.email,
+      required this.score});
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
@@ -137,10 +173,14 @@ class _$_User implements _User {
   final String lastname;
   @override
   final int age;
+  @override
+  final String email;
+  @override
+  final int score;
 
   @override
   String toString() {
-    return 'User(id: $id, firstname: $firstname, lastname: $lastname, age: $age)';
+    return 'User(id: $id, firstname: $firstname, lastname: $lastname, age: $age, email: $email, score: $score)';
   }
 
   @override
@@ -151,7 +191,9 @@ class _$_User implements _User {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.firstname, firstname) &&
             const DeepCollectionEquality().equals(other.lastname, lastname) &&
-            const DeepCollectionEquality().equals(other.age, age));
+            const DeepCollectionEquality().equals(other.age, age) &&
+            const DeepCollectionEquality().equals(other.email, email) &&
+            const DeepCollectionEquality().equals(other.score, score));
   }
 
   @JsonKey(ignore: true)
@@ -161,7 +203,9 @@ class _$_User implements _User {
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(firstname),
       const DeepCollectionEquality().hash(lastname),
-      const DeepCollectionEquality().hash(age));
+      const DeepCollectionEquality().hash(age),
+      const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(score));
 
   @JsonKey(ignore: true)
   @override
@@ -181,7 +225,9 @@ abstract class _User implements User {
       {required final int id,
       required final String firstname,
       required final String lastname,
-      required final int age}) = _$_User;
+      required final int age,
+      required final String email,
+      required final int score}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
@@ -193,6 +239,10 @@ abstract class _User implements User {
   String get lastname;
   @override
   int get age;
+  @override
+  String get email;
+  @override
+  int get score;
   @override
   @JsonKey(ignore: true)
   _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'game_state.dart';
 
@@ -29,27 +29,27 @@ mixin _$GameState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function(ListQuestions questions)? loader,
-    TResult? Function(String message)? error,
-    TResult? Function(String answer)? answerSelected,
-    TResult? Function()? goodAnswer,
-    TResult? Function()? wrongAnswer,
-    TResult? Function(Question q)? currentQuestion,
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function()? loading,
-  TResult Function(ListQuestions questions)? loader,
-  TResult Function(String message)? error,
-  TResult Function(String answer)? answerSelected,
-  TResult Function()? goodAnswer,
-  TResult Function()? wrongAnswer,
-  TResult Function(Question q)? currentQuestion,
-  required TResult orElse(),
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    required TResult orElse(),
   }) =>
-  throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Loading value) loading,
@@ -63,58 +63,58 @@ mixin _$GameState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loaded value)? loader,
-    TResult? Function(Error value)? error,
-    TResult? Function(AnswerSelected value)? answerSelected,
-    TResult? Function(GoodAnswer value)? goodAnswer,
-    TResult? Function(WrongAnswer value)? wrongAnswer,
-    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Loading value)? loading,
-  TResult Function(Loaded value)? loader,
-  TResult Function(Error value)? error,
-  TResult Function(AnswerSelected value)? answerSelected,
-  TResult Function(GoodAnswer value)? goodAnswer,
-  TResult Function(WrongAnswer value)? wrongAnswer,
-  TResult Function(currentQuestion value)? currentQuestion,
-  required TResult orElse(),
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    required TResult orElse(),
   }) =>
-  throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GameStateCopyWith<$Res> {
   factory $GameStateCopyWith(GameState value, $Res Function(GameState) then) =
-  _$GameStateCopyWithImpl<$Res, GameState>;
+      _$GameStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GameStateCopyWithImpl<$Res, $Val extends GameState>
-    implements $GameStateCopyWith<$Res> {
+class _$GameStateCopyWithImpl<$Res> implements $GameStateCopyWith<$Res> {
   _$GameStateCopyWithImpl(this._value, this._then);
 
+  final GameState _value;
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final $Res Function(GameState) _then;
 }
 
 /// @nodoc
 abstract class _$$LoadingCopyWith<$Res> {
   factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
-  __$$LoadingCopyWithImpl<$Res>;
+      __$$LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingCopyWithImpl<$Res>
-    extends _$GameStateCopyWithImpl<$Res, _$Loading>
+class __$$LoadingCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
     implements _$$LoadingCopyWith<$Res> {
   __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$Loading));
+
+  @override
+  _$Loading get _value => super._value as _$Loading;
 }
 
 /// @nodoc
@@ -153,13 +153,13 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function(ListQuestions questions)? loader,
-    TResult? Function(String message)? error,
-    TResult? Function(String answer)? answerSelected,
-    TResult? Function()? goodAnswer,
-    TResult? Function()? wrongAnswer,
-    TResult? Function(Question q)? currentQuestion,
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
   }) {
     return loading?.call();
   }
@@ -167,19 +167,19 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function()? loading,
-  TResult Function(ListQuestions questions)? loader,
-  TResult Function(String message)? error,
-  TResult Function(String answer)? answerSelected,
-  TResult Function()? goodAnswer,
-  TResult Function()? wrongAnswer,
-  TResult Function(Question q)? currentQuestion,
-  required TResult orElse(),
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (loading != null) {
-  return loading();
-  }
-  return orElse();
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
   }
 
   @override
@@ -199,13 +199,13 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loaded value)? loader,
-    TResult? Function(Error value)? error,
-    TResult? Function(AnswerSelected value)? answerSelected,
-    TResult? Function(GoodAnswer value)? goodAnswer,
-    TResult? Function(WrongAnswer value)? wrongAnswer,
-    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
   }) {
     return loading?.call(this);
   }
@@ -213,19 +213,19 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Loading value)? loading,
-  TResult Function(Loaded value)? loader,
-  TResult Function(Error value)? error,
-  TResult Function(AnswerSelected value)? answerSelected,
-  TResult Function(GoodAnswer value)? goodAnswer,
-  TResult Function(WrongAnswer value)? wrongAnswer,
-  TResult Function(currentQuestion value)? currentQuestion,
-  required TResult orElse(),
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (loading != null) {
-  return loading(this);
-  }
-  return orElse();
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
   }
 }
 
@@ -236,29 +236,38 @@ abstract class Loading implements GameState {
 /// @nodoc
 abstract class _$$LoadedCopyWith<$Res> {
   factory _$$LoadedCopyWith(_$Loaded value, $Res Function(_$Loaded) then) =
-  __$$LoadedCopyWithImpl<$Res>;
-  @useResult
+      __$$LoadedCopyWithImpl<$Res>;
   $Res call({ListQuestions questions});
+
+  $ListQuestionsCopyWith<$Res> get questions;
 }
 
 /// @nodoc
-class __$$LoadedCopyWithImpl<$Res>
-    extends _$GameStateCopyWithImpl<$Res, _$Loaded>
+class __$$LoadedCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
     implements _$$LoadedCopyWith<$Res> {
   __$$LoadedCopyWithImpl(_$Loaded _value, $Res Function(_$Loaded) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$Loaded));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$Loaded get _value => super._value as _$Loaded;
+
   @override
   $Res call({
     Object? questions = freezed,
   }) {
     return _then(_$Loaded(
-      questions: freezed == questions
+      questions: questions == freezed
           ? _value.questions
           : questions // ignore: cast_nullable_to_non_nullable
-      as ListQuestions,
+              as ListQuestions,
     ));
+  }
+
+  @override
+  $ListQuestionsCopyWith<$Res> get questions {
+    return $ListQuestionsCopyWith<$Res>(_value.questions, (value) {
+      return _then(_value.copyWith(questions: value));
+    });
   }
 }
 
@@ -289,7 +298,6 @@ class _$Loaded implements Loaded {
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$LoadedCopyWith<_$Loaded> get copyWith =>
       __$$LoadedCopyWithImpl<_$Loaded>(this, _$identity);
 
@@ -310,13 +318,13 @@ class _$Loaded implements Loaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function(ListQuestions questions)? loader,
-    TResult? Function(String message)? error,
-    TResult? Function(String answer)? answerSelected,
-    TResult? Function()? goodAnswer,
-    TResult? Function()? wrongAnswer,
-    TResult? Function(Question q)? currentQuestion,
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
   }) {
     return loader?.call(questions);
   }
@@ -324,19 +332,19 @@ class _$Loaded implements Loaded {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function()? loading,
-  TResult Function(ListQuestions questions)? loader,
-  TResult Function(String message)? error,
-  TResult Function(String answer)? answerSelected,
-  TResult Function()? goodAnswer,
-  TResult Function()? wrongAnswer,
-  TResult Function(Question q)? currentQuestion,
-  required TResult orElse(),
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (loader != null) {
-  return loader(questions);
-  }
-  return orElse();
+    if (loader != null) {
+      return loader(questions);
+    }
+    return orElse();
   }
 
   @override
@@ -356,13 +364,13 @@ class _$Loaded implements Loaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loaded value)? loader,
-    TResult? Function(Error value)? error,
-    TResult? Function(AnswerSelected value)? answerSelected,
-    TResult? Function(GoodAnswer value)? goodAnswer,
-    TResult? Function(WrongAnswer value)? wrongAnswer,
-    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
   }) {
     return loader?.call(this);
   }
@@ -370,19 +378,19 @@ class _$Loaded implements Loaded {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Loading value)? loading,
-  TResult Function(Loaded value)? loader,
-  TResult Function(Error value)? error,
-  TResult Function(AnswerSelected value)? answerSelected,
-  TResult Function(GoodAnswer value)? goodAnswer,
-  TResult Function(WrongAnswer value)? wrongAnswer,
-  TResult Function(currentQuestion value)? currentQuestion,
-  required TResult orElse(),
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (loader != null) {
-  return loader(this);
-  }
-  return orElse();
+    if (loader != null) {
+      return loader(this);
+    }
+    return orElse();
   }
 }
 
@@ -398,27 +406,28 @@ abstract class Loaded implements GameState {
 /// @nodoc
 abstract class _$$ErrorCopyWith<$Res> {
   factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
-  __$$ErrorCopyWithImpl<$Res>;
-  @useResult
+      __$$ErrorCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res, _$Error>
+class __$$ErrorCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
     implements _$$ErrorCopyWith<$Res> {
   __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$Error));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$Error get _value => super._value as _$Error;
+
   @override
   $Res call({
-    Object? message = null,
+    Object? message = freezed,
   }) {
     return _then(_$Error(
-      null == message
+      message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-      as String,
+              as String,
     ));
   }
 }
@@ -441,15 +450,15 @@ class _$Error implements Error {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Error &&
-            (identical(other.message, message) || other.message == message));
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, message);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$ErrorCopyWith<_$Error> get copyWith =>
       __$$ErrorCopyWithImpl<_$Error>(this, _$identity);
 
@@ -470,13 +479,13 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function(ListQuestions questions)? loader,
-    TResult? Function(String message)? error,
-    TResult? Function(String answer)? answerSelected,
-    TResult? Function()? goodAnswer,
-    TResult? Function()? wrongAnswer,
-    TResult? Function(Question q)? currentQuestion,
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
   }) {
     return error?.call(message);
   }
@@ -484,19 +493,19 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function()? loading,
-  TResult Function(ListQuestions questions)? loader,
-  TResult Function(String message)? error,
-  TResult Function(String answer)? answerSelected,
-  TResult Function()? goodAnswer,
-  TResult Function()? wrongAnswer,
-  TResult Function(Question q)? currentQuestion,
-  required TResult orElse(),
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (error != null) {
-  return error(message);
-  }
-  return orElse();
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
   }
 
   @override
@@ -516,13 +525,13 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loaded value)? loader,
-    TResult? Function(Error value)? error,
-    TResult? Function(AnswerSelected value)? answerSelected,
-    TResult? Function(GoodAnswer value)? goodAnswer,
-    TResult? Function(WrongAnswer value)? wrongAnswer,
-    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
   }) {
     return error?.call(this);
   }
@@ -530,19 +539,19 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Loading value)? loading,
-  TResult Function(Loaded value)? loader,
-  TResult Function(Error value)? error,
-  TResult Function(AnswerSelected value)? answerSelected,
-  TResult Function(GoodAnswer value)? goodAnswer,
-  TResult Function(WrongAnswer value)? wrongAnswer,
-  TResult Function(currentQuestion value)? currentQuestion,
-  required TResult orElse(),
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (error != null) {
-  return error(this);
-  }
-  return orElse();
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
   }
 }
 
@@ -557,30 +566,30 @@ abstract class Error implements GameState {
 /// @nodoc
 abstract class _$$AnswerSelectedCopyWith<$Res> {
   factory _$$AnswerSelectedCopyWith(
-      _$AnswerSelected value, $Res Function(_$AnswerSelected) then) =
-  __$$AnswerSelectedCopyWithImpl<$Res>;
-  @useResult
+          _$AnswerSelected value, $Res Function(_$AnswerSelected) then) =
+      __$$AnswerSelectedCopyWithImpl<$Res>;
   $Res call({String answer});
 }
 
 /// @nodoc
-class __$$AnswerSelectedCopyWithImpl<$Res>
-    extends _$GameStateCopyWithImpl<$Res, _$AnswerSelected>
+class __$$AnswerSelectedCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
     implements _$$AnswerSelectedCopyWith<$Res> {
   __$$AnswerSelectedCopyWithImpl(
       _$AnswerSelected _value, $Res Function(_$AnswerSelected) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$AnswerSelected));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$AnswerSelected get _value => super._value as _$AnswerSelected;
+
   @override
   $Res call({
-    Object? answer = null,
+    Object? answer = freezed,
   }) {
     return _then(_$AnswerSelected(
-      null == answer
+      answer == freezed
           ? _value.answer
           : answer // ignore: cast_nullable_to_non_nullable
-      as String,
+              as String,
     ));
   }
 }
@@ -603,15 +612,15 @@ class _$AnswerSelected implements AnswerSelected {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AnswerSelected &&
-            (identical(other.answer, answer) || other.answer == answer));
+            const DeepCollectionEquality().equals(other.answer, answer));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, answer);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(answer));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$AnswerSelectedCopyWith<_$AnswerSelected> get copyWith =>
       __$$AnswerSelectedCopyWithImpl<_$AnswerSelected>(this, _$identity);
 
@@ -632,13 +641,13 @@ class _$AnswerSelected implements AnswerSelected {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function(ListQuestions questions)? loader,
-    TResult? Function(String message)? error,
-    TResult? Function(String answer)? answerSelected,
-    TResult? Function()? goodAnswer,
-    TResult? Function()? wrongAnswer,
-    TResult? Function(Question q)? currentQuestion,
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
   }) {
     return answerSelected?.call(answer);
   }
@@ -646,19 +655,19 @@ class _$AnswerSelected implements AnswerSelected {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function()? loading,
-  TResult Function(ListQuestions questions)? loader,
-  TResult Function(String message)? error,
-  TResult Function(String answer)? answerSelected,
-  TResult Function()? goodAnswer,
-  TResult Function()? wrongAnswer,
-  TResult Function(Question q)? currentQuestion,
-  required TResult orElse(),
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (answerSelected != null) {
-  return answerSelected(answer);
-  }
-  return orElse();
+    if (answerSelected != null) {
+      return answerSelected(answer);
+    }
+    return orElse();
   }
 
   @override
@@ -678,13 +687,13 @@ class _$AnswerSelected implements AnswerSelected {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loaded value)? loader,
-    TResult? Function(Error value)? error,
-    TResult? Function(AnswerSelected value)? answerSelected,
-    TResult? Function(GoodAnswer value)? goodAnswer,
-    TResult? Function(WrongAnswer value)? wrongAnswer,
-    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
   }) {
     return answerSelected?.call(this);
   }
@@ -692,19 +701,19 @@ class _$AnswerSelected implements AnswerSelected {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Loading value)? loading,
-  TResult Function(Loaded value)? loader,
-  TResult Function(Error value)? error,
-  TResult Function(AnswerSelected value)? answerSelected,
-  TResult Function(GoodAnswer value)? goodAnswer,
-  TResult Function(WrongAnswer value)? wrongAnswer,
-  TResult Function(currentQuestion value)? currentQuestion,
-  required TResult orElse(),
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (answerSelected != null) {
-  return answerSelected(this);
-  }
-  return orElse();
+    if (answerSelected != null) {
+      return answerSelected(this);
+    }
+    return orElse();
   }
 }
 
@@ -720,17 +729,19 @@ abstract class AnswerSelected implements GameState {
 /// @nodoc
 abstract class _$$GoodAnswerCopyWith<$Res> {
   factory _$$GoodAnswerCopyWith(
-      _$GoodAnswer value, $Res Function(_$GoodAnswer) then) =
-  __$$GoodAnswerCopyWithImpl<$Res>;
+          _$GoodAnswer value, $Res Function(_$GoodAnswer) then) =
+      __$$GoodAnswerCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GoodAnswerCopyWithImpl<$Res>
-    extends _$GameStateCopyWithImpl<$Res, _$GoodAnswer>
+class __$$GoodAnswerCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
     implements _$$GoodAnswerCopyWith<$Res> {
   __$$GoodAnswerCopyWithImpl(
       _$GoodAnswer _value, $Res Function(_$GoodAnswer) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$GoodAnswer));
+
+  @override
+  _$GoodAnswer get _value => super._value as _$GoodAnswer;
 }
 
 /// @nodoc
@@ -769,13 +780,13 @@ class _$GoodAnswer implements GoodAnswer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function(ListQuestions questions)? loader,
-    TResult? Function(String message)? error,
-    TResult? Function(String answer)? answerSelected,
-    TResult? Function()? goodAnswer,
-    TResult? Function()? wrongAnswer,
-    TResult? Function(Question q)? currentQuestion,
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
   }) {
     return goodAnswer?.call();
   }
@@ -783,19 +794,19 @@ class _$GoodAnswer implements GoodAnswer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function()? loading,
-  TResult Function(ListQuestions questions)? loader,
-  TResult Function(String message)? error,
-  TResult Function(String answer)? answerSelected,
-  TResult Function()? goodAnswer,
-  TResult Function()? wrongAnswer,
-  TResult Function(Question q)? currentQuestion,
-  required TResult orElse(),
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (goodAnswer != null) {
-  return goodAnswer();
-  }
-  return orElse();
+    if (goodAnswer != null) {
+      return goodAnswer();
+    }
+    return orElse();
   }
 
   @override
@@ -815,13 +826,13 @@ class _$GoodAnswer implements GoodAnswer {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loaded value)? loader,
-    TResult? Function(Error value)? error,
-    TResult? Function(AnswerSelected value)? answerSelected,
-    TResult? Function(GoodAnswer value)? goodAnswer,
-    TResult? Function(WrongAnswer value)? wrongAnswer,
-    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
   }) {
     return goodAnswer?.call(this);
   }
@@ -829,19 +840,19 @@ class _$GoodAnswer implements GoodAnswer {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Loading value)? loading,
-  TResult Function(Loaded value)? loader,
-  TResult Function(Error value)? error,
-  TResult Function(AnswerSelected value)? answerSelected,
-  TResult Function(GoodAnswer value)? goodAnswer,
-  TResult Function(WrongAnswer value)? wrongAnswer,
-  TResult Function(currentQuestion value)? currentQuestion,
-  required TResult orElse(),
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (goodAnswer != null) {
-  return goodAnswer(this);
-  }
-  return orElse();
+    if (goodAnswer != null) {
+      return goodAnswer(this);
+    }
+    return orElse();
   }
 }
 
@@ -852,17 +863,19 @@ abstract class GoodAnswer implements GameState {
 /// @nodoc
 abstract class _$$WrongAnswerCopyWith<$Res> {
   factory _$$WrongAnswerCopyWith(
-      _$WrongAnswer value, $Res Function(_$WrongAnswer) then) =
-  __$$WrongAnswerCopyWithImpl<$Res>;
+          _$WrongAnswer value, $Res Function(_$WrongAnswer) then) =
+      __$$WrongAnswerCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$WrongAnswerCopyWithImpl<$Res>
-    extends _$GameStateCopyWithImpl<$Res, _$WrongAnswer>
+class __$$WrongAnswerCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res>
     implements _$$WrongAnswerCopyWith<$Res> {
   __$$WrongAnswerCopyWithImpl(
       _$WrongAnswer _value, $Res Function(_$WrongAnswer) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$WrongAnswer));
+
+  @override
+  _$WrongAnswer get _value => super._value as _$WrongAnswer;
 }
 
 /// @nodoc
@@ -901,13 +914,13 @@ class _$WrongAnswer implements WrongAnswer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function(ListQuestions questions)? loader,
-    TResult? Function(String message)? error,
-    TResult? Function(String answer)? answerSelected,
-    TResult? Function()? goodAnswer,
-    TResult? Function()? wrongAnswer,
-    TResult? Function(Question q)? currentQuestion,
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
   }) {
     return wrongAnswer?.call();
   }
@@ -915,19 +928,19 @@ class _$WrongAnswer implements WrongAnswer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function()? loading,
-  TResult Function(ListQuestions questions)? loader,
-  TResult Function(String message)? error,
-  TResult Function(String answer)? answerSelected,
-  TResult Function()? goodAnswer,
-  TResult Function()? wrongAnswer,
-  TResult Function(Question q)? currentQuestion,
-  required TResult orElse(),
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (wrongAnswer != null) {
-  return wrongAnswer();
-  }
-  return orElse();
+    if (wrongAnswer != null) {
+      return wrongAnswer();
+    }
+    return orElse();
   }
 
   @override
@@ -947,13 +960,13 @@ class _$WrongAnswer implements WrongAnswer {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loaded value)? loader,
-    TResult? Function(Error value)? error,
-    TResult? Function(AnswerSelected value)? answerSelected,
-    TResult? Function(GoodAnswer value)? goodAnswer,
-    TResult? Function(WrongAnswer value)? wrongAnswer,
-    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
   }) {
     return wrongAnswer?.call(this);
   }
@@ -961,19 +974,19 @@ class _$WrongAnswer implements WrongAnswer {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Loading value)? loading,
-  TResult Function(Loaded value)? loader,
-  TResult Function(Error value)? error,
-  TResult Function(AnswerSelected value)? answerSelected,
-  TResult Function(GoodAnswer value)? goodAnswer,
-  TResult Function(WrongAnswer value)? wrongAnswer,
-  TResult Function(currentQuestion value)? currentQuestion,
-  required TResult orElse(),
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (wrongAnswer != null) {
-  return wrongAnswer(this);
-  }
-  return orElse();
+    if (wrongAnswer != null) {
+      return wrongAnswer(this);
+    }
+    return orElse();
   }
 }
 
@@ -984,9 +997,8 @@ abstract class WrongAnswer implements GameState {
 /// @nodoc
 abstract class _$$currentQuestionCopyWith<$Res> {
   factory _$$currentQuestionCopyWith(
-      _$currentQuestion value, $Res Function(_$currentQuestion) then) =
-  __$$currentQuestionCopyWithImpl<$Res>;
-  @useResult
+          _$currentQuestion value, $Res Function(_$currentQuestion) then) =
+      __$$currentQuestionCopyWithImpl<$Res>;
   $Res call({Question q});
 
   $QuestionCopyWith<$Res> get q;
@@ -994,27 +1006,28 @@ abstract class _$$currentQuestionCopyWith<$Res> {
 
 /// @nodoc
 class __$$currentQuestionCopyWithImpl<$Res>
-    extends _$GameStateCopyWithImpl<$Res, _$currentQuestion>
+    extends _$GameStateCopyWithImpl<$Res>
     implements _$$currentQuestionCopyWith<$Res> {
   __$$currentQuestionCopyWithImpl(
       _$currentQuestion _value, $Res Function(_$currentQuestion) _then)
-      : super(_value, _then);
+      : super(_value, (v) => _then(v as _$currentQuestion));
 
-  @pragma('vm:prefer-inline')
+  @override
+  _$currentQuestion get _value => super._value as _$currentQuestion;
+
   @override
   $Res call({
-    Object? q = null,
+    Object? q = freezed,
   }) {
     return _then(_$currentQuestion(
-      null == q
+      q == freezed
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
-      as Question,
+              as Question,
     ));
   }
 
   @override
-  @pragma('vm:prefer-inline')
   $QuestionCopyWith<$Res> get q {
     return $QuestionCopyWith<$Res>(_value.q, (value) {
       return _then(_value.copyWith(q: value));
@@ -1040,15 +1053,15 @@ class _$currentQuestion implements currentQuestion {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$currentQuestion &&
-            (identical(other.q, q) || other.q == q));
+            const DeepCollectionEquality().equals(other.q, q));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, q);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(q));
 
   @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
   _$$currentQuestionCopyWith<_$currentQuestion> get copyWith =>
       __$$currentQuestionCopyWithImpl<_$currentQuestion>(this, _$identity);
 
@@ -1069,13 +1082,13 @@ class _$currentQuestion implements currentQuestion {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function(ListQuestions questions)? loader,
-    TResult? Function(String message)? error,
-    TResult? Function(String answer)? answerSelected,
-    TResult? Function()? goodAnswer,
-    TResult? Function()? wrongAnswer,
-    TResult? Function(Question q)? currentQuestion,
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
   }) {
     return currentQuestion?.call(q);
   }
@@ -1083,19 +1096,19 @@ class _$currentQuestion implements currentQuestion {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-  TResult Function()? loading,
-  TResult Function(ListQuestions questions)? loader,
-  TResult Function(String message)? error,
-  TResult Function(String answer)? answerSelected,
-  TResult Function()? goodAnswer,
-  TResult Function()? wrongAnswer,
-  TResult Function(Question q)? currentQuestion,
-  required TResult orElse(),
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (currentQuestion != null) {
-  return currentQuestion(q);
-  }
-  return orElse();
+    if (currentQuestion != null) {
+      return currentQuestion(q);
+    }
+    return orElse();
   }
 
   @override
@@ -1115,13 +1128,13 @@ class _$currentQuestion implements currentQuestion {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loaded value)? loader,
-    TResult? Function(Error value)? error,
-    TResult? Function(AnswerSelected value)? answerSelected,
-    TResult? Function(GoodAnswer value)? goodAnswer,
-    TResult? Function(WrongAnswer value)? wrongAnswer,
-    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
   }) {
     return currentQuestion?.call(this);
   }
@@ -1129,19 +1142,19 @@ class _$currentQuestion implements currentQuestion {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-  TResult Function(Loading value)? loading,
-  TResult Function(Loaded value)? loader,
-  TResult Function(Error value)? error,
-  TResult Function(AnswerSelected value)? answerSelected,
-  TResult Function(GoodAnswer value)? goodAnswer,
-  TResult Function(WrongAnswer value)? wrongAnswer,
-  TResult Function(currentQuestion value)? currentQuestion,
-  required TResult orElse(),
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    required TResult orElse(),
   }) {
-  if (currentQuestion != null) {
-  return currentQuestion(this);
-  }
-  return orElse();
+    if (currentQuestion != null) {
+      return currentQuestion(this);
+    }
+    return orElse();
   }
 }
 
