@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:swiping_card_deck/swiping_card_deck.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
 import 'package:trivial_pursuit/data/repositories/question_repository.dart';
-import 'package:trivial_pursuit/ui/pages/home/game/bloc/game_state.dart';
-import 'package:trivial_pursuit/ui/pages/home/game/game_cubit.dart';
+import 'package:trivial_pursuit/ui/pages/game/bloc/game_state.dart';
+import 'package:trivial_pursuit/ui/pages/game/game_cubit.dart';
+
 
 class GamePage extends StatefulWidget {
   const GamePage({super.key});
@@ -51,6 +51,8 @@ class _GamePageState extends State<GamePage> {
                   return const Text("Henri");
                 })));
   }
+
+  //Pour appeler le router :
 
   void createQuestion(Question question) {
     _currentResponse = [...question.incorrectAnswers!, question.correctAnswer!]

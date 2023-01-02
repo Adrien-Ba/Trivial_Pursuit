@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const SignUpPage(),
+        builder: (context, state) => const HomePage(),
       ),
       GoRoute(
         path: '/test/:name',

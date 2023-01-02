@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trivial_pursuit/ui/pages/home/classement/classement_page.dart';
-import 'package:trivial_pursuit/ui/pages/home/game/game_page.dart';
-import 'package:trivial_pursuit/ui/pages/home/profile/profile_page.dart';
+import 'package:trivial_pursuit/ui/pages/classement/classement_page.dart';
+import 'package:trivial_pursuit/ui/pages/game/game_page.dart';
+import 'package:trivial_pursuit/ui/pages/profile/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
