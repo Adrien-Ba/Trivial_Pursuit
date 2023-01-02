@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:trivial_pursuit/firebase_options.dart';
 import 'package:trivial_pursuit/ui/pages/home/home_page.dart';
+import 'package:trivial_pursuit/ui/pages/login/login_page.dart';
 
 void main() async{
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const HomePage(),
+        builder: (context, state) => LoginPage(),
       ),
       GoRoute(
         path: '/test/:name',
