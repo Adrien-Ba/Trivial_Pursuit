@@ -6,6 +6,8 @@ import 'package:trivial_pursuit/data/repositories/question_repository.dart';
 import 'package:trivial_pursuit/ui/pages/game/bloc/game_state.dart';
 import 'package:trivial_pursuit/ui/pages/game/game_cubit.dart';
 
+import '../../../data/entities/list_questions.dart';
+
 class GamePage extends StatefulWidget {
   const GamePage({super.key});
 

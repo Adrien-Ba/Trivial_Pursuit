@@ -18,51 +18,51 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$LoginState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function() loginit,
+    required TResult Function() initial,
     required TResult Function() correct,
     required TResult Function() incorrect,
+    required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function()? loginit,
+    TResult? Function()? initial,
     TResult? Function()? correct,
     TResult? Function()? incorrect,
+    TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? loginit,
+    TResult Function()? initial,
     TResult Function()? correct,
     TResult Function()? incorrect,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Loading value) loading,
-    required TResult Function(Loginit value) loginit,
+    required TResult Function(Initial value) initial,
     required TResult Function(Correct value) correct,
     required TResult Function(Incorrect value) incorrect,
+    required TResult Function(Error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loginit value)? loginit,
+    TResult? Function(Initial value)? initial,
     TResult? Function(Correct value)? correct,
     TResult? Function(Incorrect value)? incorrect,
+    TResult? Function(Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loginit value)? loginit,
+    TResult Function(Initial value)? initial,
     TResult Function(Correct value)? correct,
     TResult Function(Incorrect value)? incorrect,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -87,33 +87,33 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
 }
 
 /// @nodoc
-abstract class _$$LoadingCopyWith<$Res> {
-  factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
-      __$$LoadingCopyWithImpl<$Res>;
+abstract class _$$InitialCopyWith<$Res> {
+  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
+      __$$InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$Loading>
-    implements _$$LoadingCopyWith<$Res> {
-  __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
+class __$$InitialCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$Initial>
+    implements _$$InitialCopyWith<$Res> {
+  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Loading implements Loading {
-  const _$Loading();
+class _$Initial implements Initial {
+  const _$Initial();
 
   @override
   String toString() {
-    return 'LoginState.loading()';
+    return 'LoginState.initial()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Loading);
+        (other.runtimeType == runtimeType && other is _$Initial);
   }
 
   @override
@@ -122,36 +122,36 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function() loginit,
+    required TResult Function() initial,
     required TResult Function() correct,
     required TResult Function() incorrect,
+    required TResult Function(String message) error,
   }) {
-    return loading();
+    return initial();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function()? loginit,
+    TResult? Function()? initial,
     TResult? Function()? correct,
     TResult? Function()? incorrect,
+    TResult? Function(String message)? error,
   }) {
-    return loading?.call();
+    return initial?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? loginit,
+    TResult Function()? initial,
     TResult Function()? correct,
     TResult Function()? incorrect,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading();
+    if (initial != null) {
+      return initial();
     }
     return orElse();
   }
@@ -159,155 +159,43 @@ class _$Loading implements Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Loading value) loading,
-    required TResult Function(Loginit value) loginit,
+    required TResult Function(Initial value) initial,
     required TResult Function(Correct value) correct,
     required TResult Function(Incorrect value) incorrect,
+    required TResult Function(Error value) error,
   }) {
-    return loading(this);
+    return initial(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loginit value)? loginit,
+    TResult? Function(Initial value)? initial,
     TResult? Function(Correct value)? correct,
     TResult? Function(Incorrect value)? incorrect,
+    TResult? Function(Error value)? error,
   }) {
-    return loading?.call(this);
+    return initial?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loginit value)? loginit,
+    TResult Function(Initial value)? initial,
     TResult Function(Correct value)? correct,
     TResult Function(Incorrect value)? incorrect,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading(this);
+    if (initial != null) {
+      return initial(this);
     }
     return orElse();
   }
 }
 
-abstract class Loading implements LoginState {
-  const factory Loading() = _$Loading;
-}
-
-/// @nodoc
-abstract class _$$LoginitCopyWith<$Res> {
-  factory _$$LoginitCopyWith(_$Loginit value, $Res Function(_$Loginit) then) =
-      __$$LoginitCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoginitCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$Loginit>
-    implements _$$LoginitCopyWith<$Res> {
-  __$$LoginitCopyWithImpl(_$Loginit _value, $Res Function(_$Loginit) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$Loginit implements Loginit {
-  const _$Loginit();
-
-  @override
-  String toString() {
-    return 'LoginState.loginit()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Loginit);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function() loginit,
-    required TResult Function() correct,
-    required TResult Function() incorrect,
-  }) {
-    return loginit();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function()? loginit,
-    TResult? Function()? correct,
-    TResult? Function()? incorrect,
-  }) {
-    return loginit?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? loginit,
-    TResult Function()? correct,
-    TResult Function()? incorrect,
-    required TResult orElse(),
-  }) {
-    if (loginit != null) {
-      return loginit();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Loading value) loading,
-    required TResult Function(Loginit value) loginit,
-    required TResult Function(Correct value) correct,
-    required TResult Function(Incorrect value) incorrect,
-  }) {
-    return loginit(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loginit value)? loginit,
-    TResult? Function(Correct value)? correct,
-    TResult? Function(Incorrect value)? incorrect,
-  }) {
-    return loginit?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loginit value)? loginit,
-    TResult Function(Correct value)? correct,
-    TResult Function(Incorrect value)? incorrect,
-    required TResult orElse(),
-  }) {
-    if (loginit != null) {
-      return loginit(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Loginit implements LoginState {
-  const factory Loginit() = _$Loginit;
+abstract class Initial implements LoginState {
+  const factory Initial() = _$Initial;
 }
 
 /// @nodoc
@@ -346,10 +234,10 @@ class _$Correct implements Correct {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function() loginit,
+    required TResult Function() initial,
     required TResult Function() correct,
     required TResult Function() incorrect,
+    required TResult Function(String message) error,
   }) {
     return correct();
   }
@@ -357,10 +245,10 @@ class _$Correct implements Correct {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function()? loginit,
+    TResult? Function()? initial,
     TResult? Function()? correct,
     TResult? Function()? incorrect,
+    TResult? Function(String message)? error,
   }) {
     return correct?.call();
   }
@@ -368,10 +256,10 @@ class _$Correct implements Correct {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? loginit,
+    TResult Function()? initial,
     TResult Function()? correct,
     TResult Function()? incorrect,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (correct != null) {
@@ -383,10 +271,10 @@ class _$Correct implements Correct {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Loading value) loading,
-    required TResult Function(Loginit value) loginit,
+    required TResult Function(Initial value) initial,
     required TResult Function(Correct value) correct,
     required TResult Function(Incorrect value) incorrect,
+    required TResult Function(Error value) error,
   }) {
     return correct(this);
   }
@@ -394,10 +282,10 @@ class _$Correct implements Correct {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loginit value)? loginit,
+    TResult? Function(Initial value)? initial,
     TResult? Function(Correct value)? correct,
     TResult? Function(Incorrect value)? incorrect,
+    TResult? Function(Error value)? error,
   }) {
     return correct?.call(this);
   }
@@ -405,10 +293,10 @@ class _$Correct implements Correct {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loginit value)? loginit,
+    TResult Function(Initial value)? initial,
     TResult Function(Correct value)? correct,
     TResult Function(Incorrect value)? incorrect,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (correct != null) {
@@ -460,10 +348,10 @@ class _$Incorrect implements Incorrect {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function() loginit,
+    required TResult Function() initial,
     required TResult Function() correct,
     required TResult Function() incorrect,
+    required TResult Function(String message) error,
   }) {
     return incorrect();
   }
@@ -471,10 +359,10 @@ class _$Incorrect implements Incorrect {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loading,
-    TResult? Function()? loginit,
+    TResult? Function()? initial,
     TResult? Function()? correct,
     TResult? Function()? incorrect,
+    TResult? Function(String message)? error,
   }) {
     return incorrect?.call();
   }
@@ -482,10 +370,10 @@ class _$Incorrect implements Incorrect {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? loginit,
+    TResult Function()? initial,
     TResult Function()? correct,
     TResult Function()? incorrect,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (incorrect != null) {
@@ -497,10 +385,10 @@ class _$Incorrect implements Incorrect {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Loading value) loading,
-    required TResult Function(Loginit value) loginit,
+    required TResult Function(Initial value) initial,
     required TResult Function(Correct value) correct,
     required TResult Function(Incorrect value) incorrect,
+    required TResult Function(Error value) error,
   }) {
     return incorrect(this);
   }
@@ -508,10 +396,10 @@ class _$Incorrect implements Incorrect {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Loginit value)? loginit,
+    TResult? Function(Initial value)? initial,
     TResult? Function(Correct value)? correct,
     TResult? Function(Incorrect value)? incorrect,
+    TResult? Function(Error value)? error,
   }) {
     return incorrect?.call(this);
   }
@@ -519,10 +407,10 @@ class _$Incorrect implements Incorrect {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Loading value)? loading,
-    TResult Function(Loginit value)? loginit,
+    TResult Function(Initial value)? initial,
     TResult Function(Correct value)? correct,
     TResult Function(Incorrect value)? incorrect,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (incorrect != null) {
@@ -534,4 +422,146 @@ class _$Incorrect implements Incorrect {
 
 abstract class Incorrect implements LoginState {
   const factory Incorrect() = _$Incorrect;
+}
+
+/// @nodoc
+abstract class _$$ErrorCopyWith<$Res> {
+  factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
+      __$$ErrorCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$ErrorCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$Error>
+    implements _$$ErrorCopyWith<$Res> {
+  __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$Error(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Error implements Error {
+  const _$Error(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'LoginState.error(message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Error &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorCopyWith<_$Error> get copyWith =>
+      __$$ErrorCopyWithImpl<_$Error>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() correct,
+    required TResult Function() incorrect,
+    required TResult Function(String message) error,
+  }) {
+    return error(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? correct,
+    TResult? Function()? incorrect,
+    TResult? Function(String message)? error,
+  }) {
+    return error?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? correct,
+    TResult Function()? incorrect,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Correct value) correct,
+    required TResult Function(Incorrect value) incorrect,
+    required TResult Function(Error value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Correct value)? correct,
+    TResult? Function(Incorrect value)? incorrect,
+    TResult? Function(Error value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Correct value)? correct,
+    TResult Function(Incorrect value)? incorrect,
+    TResult Function(Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Error implements LoginState {
+  const factory Error(final String message) = _$Error;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$ErrorCopyWith<_$Error> get copyWith => throw _privateConstructorUsedError;
 }
