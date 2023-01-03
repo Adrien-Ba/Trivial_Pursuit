@@ -19,3 +19,5 @@ class User with _$User {
     /// Creates a User from Json map
   factory User.fromJson(Map<String, dynamic> data) => _$UserFromJson(data);
 }
+
+//DATE POUR SAVOIR SI C'EST FINI LE JEU DU JOUR
