@@ -12,9 +12,10 @@ class ProfileCubit extends Cubit<ProfileState> {
     try {
       final userRep = await repository.getUser(uid);
       if(userRep != null) {
-
+        emit(Loaded(user : userRep));
+      } else {
+        emit(Disconnected());
       }
-      emit(Loaded(user : userRep));
     } catch (e) {
       emit(Disconnected());
     }
