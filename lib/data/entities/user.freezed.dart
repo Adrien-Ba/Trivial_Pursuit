@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user.dart';
 
@@ -20,11 +20,8 @@ User _$UserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$User {
-  int get id => throw _privateConstructorUsedError;
-  String get firstname => throw _privateConstructorUsedError;
-  String get lastname => throw _privateConstructorUsedError;
+  String get pseudo => throw _privateConstructorUsedError;
   int get age => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
   int get score => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,59 +32,42 @@ mixin _$User {
 /// @nodoc
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
-      _$UserCopyWithImpl<$Res>;
-  $Res call(
-      {int id,
-      String firstname,
-      String lastname,
-      int age,
-      String email,
-      int score});
+      _$UserCopyWithImpl<$Res, User>;
+  @useResult
+  $Res call({String pseudo, int age, int score});
 }
 
 /// @nodoc
-class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
+class _$UserCopyWithImpl<$Res, $Val extends User>
+    implements $UserCopyWith<$Res> {
   _$UserCopyWithImpl(this._value, this._then);
 
-  final User _value;
   // ignore: unused_field
-  final $Res Function(User) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? firstname = freezed,
-    Object? lastname = freezed,
-    Object? age = freezed,
-    Object? email = freezed,
-    Object? score = freezed,
+    Object? pseudo = null,
+    Object? age = null,
+    Object? score = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      firstname: firstname == freezed
-          ? _value.firstname
-          : firstname // ignore: cast_nullable_to_non_nullable
+      pseudo: null == pseudo
+          ? _value.pseudo
+          : pseudo // ignore: cast_nullable_to_non_nullable
               as String,
-      lastname: lastname == freezed
-          ? _value.lastname
-          : lastname // ignore: cast_nullable_to_non_nullable
-              as String,
-      age: age == freezed
+      age: null == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
-      email: email == freezed
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      score: score == freezed
+      score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -96,55 +76,33 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$$_UserCopyWith(_$_User value, $Res Function(_$_User) then) =
       __$$_UserCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {int id,
-      String firstname,
-      String lastname,
-      int age,
-      String email,
-      int score});
+  @useResult
+  $Res call({String pseudo, int age, int score});
 }
 
 /// @nodoc
-class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
+class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
     implements _$$_UserCopyWith<$Res> {
   __$$_UserCopyWithImpl(_$_User _value, $Res Function(_$_User) _then)
-      : super(_value, (v) => _then(v as _$_User));
+      : super(_value, _then);
 
-  @override
-  _$_User get _value => super._value as _$_User;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? firstname = freezed,
-    Object? lastname = freezed,
-    Object? age = freezed,
-    Object? email = freezed,
-    Object? score = freezed,
+    Object? pseudo = null,
+    Object? age = null,
+    Object? score = null,
   }) {
     return _then(_$_User(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      firstname: firstname == freezed
-          ? _value.firstname
-          : firstname // ignore: cast_nullable_to_non_nullable
+      pseudo: null == pseudo
+          ? _value.pseudo
+          : pseudo // ignore: cast_nullable_to_non_nullable
               as String,
-      lastname: lastname == freezed
-          ? _value.lastname
-          : lastname // ignore: cast_nullable_to_non_nullable
-              as String,
-      age: age == freezed
+      age: null == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
-      email: email == freezed
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      score: score == freezed
+      score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int,
@@ -155,32 +113,20 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_User implements _User {
-  const _$_User(
-      {required this.id,
-      required this.firstname,
-      required this.lastname,
-      required this.age,
-      required this.email,
-      required this.score});
+  const _$_User({required this.pseudo, required this.age, required this.score});
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
   @override
-  final int id;
-  @override
-  final String firstname;
-  @override
-  final String lastname;
+  final String pseudo;
   @override
   final int age;
-  @override
-  final String email;
   @override
   final int score;
 
   @override
   String toString() {
-    return 'User(id: $id, firstname: $firstname, lastname: $lastname, age: $age, email: $email, score: $score)';
+    return 'User(pseudo: $pseudo, age: $age, score: $score)';
   }
 
   @override
@@ -188,27 +134,18 @@ class _$_User implements _User {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_User &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.firstname, firstname) &&
-            const DeepCollectionEquality().equals(other.lastname, lastname) &&
-            const DeepCollectionEquality().equals(other.age, age) &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.score, score));
+            (identical(other.pseudo, pseudo) || other.pseudo == pseudo) &&
+            (identical(other.age, age) || other.age == age) &&
+            (identical(other.score, score) || other.score == score));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(firstname),
-      const DeepCollectionEquality().hash(lastname),
-      const DeepCollectionEquality().hash(age),
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(score));
+  int get hashCode => Object.hash(runtimeType, pseudo, age, score);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserCopyWith<_$_User> get copyWith =>
       __$$_UserCopyWithImpl<_$_User>(this, _$identity);
 
@@ -222,25 +159,16 @@ class _$_User implements _User {
 
 abstract class _User implements User {
   const factory _User(
-      {required final int id,
-      required final String firstname,
-      required final String lastname,
+      {required final String pseudo,
       required final int age,
-      required final String email,
       required final int score}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
-  int get id;
-  @override
-  String get firstname;
-  @override
-  String get lastname;
+  String get pseudo;
   @override
   int get age;
-  @override
-  String get email;
   @override
   int get score;
   @override

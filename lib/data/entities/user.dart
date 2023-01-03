@@ -10,12 +10,9 @@ part 'user.g.dart';
 @freezed
 class User with _$User {
   /// {@macro user}
-  const factory User({ 
-    required int id,
-    required String firstname,
-    required String lastname,
+  const factory User({
+    required String pseudo,
     required int age,
-    required String email,
     required int score
   }) = _User;
   

@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
           create: (context) {
             _loginCubit = LoginCubit(
                 repository: RepositoryProvider.of<LoginRepository>(context));
-            return _loginCubit!;
+            return _loginCubit!..getCurrentUser();
           },
           child: BlocConsumer<LoginCubit, LoginState>(
             listener: (context, state) => state.maybeMap(
@@ -45,13 +45,11 @@ class _LoginPageState extends State<LoginPage> {
             builder: (context, state) {
               if (state is Initial) {
                 return Scaffold(
+                  appBar: AppBar(
+                    title: const Text('Connexion'),
+                  ),
                   body: Column(
                     children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Email",
-                        ),
-                      ),
                       TextField(
                         controller: emailController,
                         decoration: InputDecoration(
@@ -64,14 +62,28 @@ class _LoginPageState extends State<LoginPage> {
                           labelText: "Password",
                         ),
                       ),
-                      ElevatedButton(
-                        onPressed: () {
-                          _loginCubit!
-                              //.signIn(emailController.text, passwordController.text);
-                          .signIn("toto@toto.fr", "totototo");
-                          //_loginCubit!.logout();
-                        },
-                        child: Text("Se connecter"),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              _loginCubit!
+                                  //.signIn(emailController.text, passwordController.text);
+                                  .signIn("toto@toto.fr", "totototo");
+                              //_loginCubit!.logout();
+                            },
+                            child: Text("Se connecter"),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(16.0),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              //TODO context.go
+                            },
+                            child: Text("Céer mon compte"),
+                          ),
+                        ],
                       )
                     ],
                   ),

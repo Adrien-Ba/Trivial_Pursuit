@@ -16,6 +16,15 @@ class LoginCubit extends Cubit<LoginState> {
     }
   }
 
+  void getCurrentUser() async {
+    final response = await repository.getCurrentUser();
+    if(response != null) {
+      emit(Correct());
+    } else {
+      emit(Initial());
+    }
+  }
+
   void logout() async {
     await repository.logOut();
   }

@@ -38,4 +38,8 @@ class LoginRepository {
       return e.message;
     }
   }
+
+  Future<String?> getCurrentUser() async {
+    return await _authFirebase!.getCurrentUser();
+  }
 }
