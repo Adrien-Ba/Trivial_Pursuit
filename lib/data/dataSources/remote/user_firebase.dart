@@ -35,7 +35,5 @@ class UserFirebase {
     QuerySnapshot<User> response = await _userRef.get();
     return response;
   }
-
-
 }
 

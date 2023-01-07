@@ -13,7 +13,7 @@ class ClassementPage extends StatefulWidget {
 
 class _ClassementPageState extends State<ClassementPage> {
   final List<String> _liste =
-      List<String>.generate(20, (index) => 'Tristan est beau $index');
+  List<String>.generate(20, (index) => 'Tristan est beau $index');
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +32,8 @@ class _ClassementPageState extends State<ClassementPage> {
               return Text("init");
             }
             if(state is Loaded) {
-              return Text("test");
-              /*return Column(
+
+              return Column(
                 children: [
                   TextField(
                     decoration: InputDecoration(
@@ -51,24 +51,24 @@ class _ClassementPageState extends State<ClassementPage> {
                           itemBuilder: (context, index) {
                             if (index % 2 == 0) {
                               return Material(child: ListTile(
-                                title: Text(_liste[index]),
+                                title: Text(state.listUsers.docs.elementAt(index).data().pseudo),
                                 tileColor: Colors.grey[200],));
                             }
                             else {
                               return Material(child: ListTile(
-                                title: Text(_liste[index]),
+                                title: Text(state.listUsers.docs.elementAt(index).data().pseudo),
                                 tileColor: Colors.grey[300],));
                             }
                           },
                           separatorBuilder: (context, index) {
                             return Divider();
                           },
-                          itemCount: _liste
-                              .length) //OBLIGATOIRE POUR AFFICHER UNE LISTE
+                          itemCount: state.listUsers.docs.length
+                              ) //OBLIGATOIRE POUR AFFICHER UNE LISTE
 
                   )
                 ],
-              );*/
+              );
             }
             return Text("error");
           },
