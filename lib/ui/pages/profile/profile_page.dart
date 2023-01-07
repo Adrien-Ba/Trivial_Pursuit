@@ -20,12 +20,15 @@ class _ProfileState extends State<Profile> {
         create: (context) {
           var cubit = ProfileCubit(
               repository: RepositoryProvider.of<ProfileRepository>(context));
-        return cubit!..getProfile("thisUID");
+        return cubit!..getProfile("r7n4AmarvofFxx9LpXF2D8ALfTk1");
           },
         child: BlocConsumer<ProfileCubit, ProfileState>(
           listener: (context, state) {},
           builder: (context, state) {
             if(state is Initial) {
+              Text("testeeee");
+            }
+            if(state is Loaded) {
               return Column(
                 children: [
                   Padding(

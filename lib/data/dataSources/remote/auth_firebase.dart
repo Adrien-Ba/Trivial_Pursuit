@@ -31,9 +31,8 @@ class AuthFirebase {
   }
 
   Future<String?> getCurrentUser() async {
-    return await _authInstance!.currentUser?.uid;
-}
-
-//.currentuser.uid
+    await _authInstance!.currentUser?.reload();
+    return _authInstance!.currentUser?.uid;
+  }
 
 }

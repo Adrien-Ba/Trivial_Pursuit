@@ -52,13 +52,13 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       TextField(
                         controller: emailController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: "Email",
                         ),
                       ),
                       TextField(
                         controller: passwordController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: "Password",
                         ),
                       ),
@@ -68,20 +68,20 @@ class _LoginPageState extends State<LoginPage> {
                           ElevatedButton(
                             onPressed: () {
                               _loginCubit!
-                                  //.signIn(emailController.text, passwordController.text);
-                                  .signIn("toto@toto.fr", "totototo");
+                                  .signIn(emailController.text, passwordController.text);
+                                  //.signIn("toto@toto.fr", "totototo");
                               //_loginCubit!.logout();
                             },
-                            child: Text("Se connecter"),
+                            child: const Text("Se connecter"),
                           ),
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.all(16.0),
                           ),
                           ElevatedButton(
                             onPressed: () {
                               //TODO context.go
                             },
-                            child: Text("Céer mon compte"),
+                            child: const Text("Céer mon compte"),
                           ),
                         ],
                       )
