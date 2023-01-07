@@ -31,6 +31,10 @@ class UserFirebase {
     return null;
   }
 
+  Future<void> createUser(String uid, User user) async {
+    await _userRef.doc(uid).set(user);
+  }
+
   Future<QuerySnapshot<User>> getUsers() async {
     QuerySnapshot<User> response = await _userRef.get();
     return response;

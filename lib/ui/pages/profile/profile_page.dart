@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:trivial_pursuit/data/repositories/profile_repository.dart';
 import 'package:trivial_pursuit/ui/pages/profile/bloc/profile_state.dart';
 import 'package:trivial_pursuit/ui/pages/profile/profile_cubit.dart';
@@ -12,21 +13,26 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  ProfileCubit? _profileCubit;
+
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider(
       create: (context) => ProfileRepository.get(),
       child: BlocProvider(
         create: (context) {
-          var cubit = ProfileCubit(
+          _profileCubit = ProfileCubit(
               repository: RepositoryProvider.of<ProfileRepository>(context));
-        return cubit!..getProfile("r7n4AmarvofFxx9LpXF2D8ALfTk1");
+        return _profileCubit!..getProfile("r7n4AmarvofFxx9LpXF2D8ALfTk1");
           },
         child: BlocConsumer<ProfileCubit, ProfileState>(
-          listener: (context, state) {},
+          listener: (context, state) => state.maybeMap(
+            disconnected: (value) => context.go("/"),
+            orElse: () => null,
+          ),
           builder: (context, state) {
             if(state is Initial) {
-              Text("testeeee");
+              Text("testeeee");//TODO inutile, le state ne peux pas être initial car si deconencte , redirect vers login
             }
             if(state is Loaded) {
               return Column(
@@ -62,8 +68,10 @@ class _ProfileState extends State<Profile> {
                     padding: const EdgeInsets.all(8.0),
                     child: Align(
                       alignment: Alignment.bottomCenter,
-                      child: OutlinedButton(
-                        onPressed: () {},
+                      child: ElevatedButton(
+                        onPressed: () {
+                          _profileCubit!.logout();
+                        },
                         child: const Text('Déconnexion'),
                       ),
                     ),

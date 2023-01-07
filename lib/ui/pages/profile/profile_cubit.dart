@@ -20,4 +20,9 @@ class ProfileCubit extends Cubit<ProfileState> {
       emit(Disconnected());
     }
   }
+
+  void logout() async {
+    await repository.logOut();
+    emit(Disconnected());
+  }
 }

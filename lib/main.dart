@@ -5,6 +5,7 @@ import 'package:trivial_pursuit/firebase_options.dart';
 import 'package:trivial_pursuit/ui/pages/game/game_page.dart';
 import 'package:trivial_pursuit/ui/pages/home/home_page.dart';
 import 'package:trivial_pursuit/ui/pages/login/login_page.dart';
+import 'package:trivial_pursuit/ui/pages/signup/signup_page.dart';
 
 void main() async{
 
@@ -36,7 +37,11 @@ class MyApp extends StatelessWidget {
       GoRoute(
         path: "/game",
         builder: (context, state) => HomePage(),
-      )
+      ),
+      GoRoute(
+        path: "/signUp",
+        builder: (context, state) => SignUpPage(),
+      ),
     ]
   );
 

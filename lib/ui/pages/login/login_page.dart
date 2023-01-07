@@ -67,9 +67,9 @@ class _LoginPageState extends State<LoginPage> {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              _loginCubit!
-                                  .signIn(emailController.text, passwordController.text);
-                                  //.signIn("toto@toto.fr", "totototo");
+                              _loginCubit!.signIn(emailController.text,
+                                  passwordController.text);
+                              //.signIn("toto@toto.fr", "totototo");
                               //_loginCubit!.logout();
                             },
                             child: const Text("Se connecter"),
@@ -77,12 +77,12 @@ class _LoginPageState extends State<LoginPage> {
                           const Padding(
                             padding: EdgeInsets.all(16.0),
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO context.go
+                          GestureDetector(
+                            child: Text("Pour créer un compte, cliquez ICI"),
+                            onTap: () {
+                              context.go("/signUp");
                             },
-                            child: const Text("Céer mon compte"),
-                          ),
+                          )
                         ],
                       )
                     ],
