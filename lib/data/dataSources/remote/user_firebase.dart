@@ -36,7 +36,13 @@ class UserFirebase {
   }
 
   Future<void> setUserScore(String uid, int score) async {
-    await _userRef.doc(uid).update({"score" : score});
+    DocumentSnapshot<User> user = await _userRef.doc(uid).get();
+    DateTime date = DateTime.now();
+    String dateString = '${date.year}-${date.month}-${date.day}';
+    if(user.data()!.date!=dateString) {
+      await _userRef.doc(uid).update(
+          {"score": score + user.data()!.score, "date": dateString});
+    }
   }
 
   Future<QuerySnapshot<User>> getUsers() async {

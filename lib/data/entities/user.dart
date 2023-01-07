@@ -13,7 +13,8 @@ class User with _$User {
   const factory User({
     required String pseudo,
     required int age,
-    required int score
+    required int score,
+    required String date,
   }) = _User;
   
     /// Creates a User from Json map

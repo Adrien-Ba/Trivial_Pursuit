@@ -107,7 +107,7 @@ class _GamePageState extends State<GamePage> {
                     ]);
                   }
                   if(state is EndGame) {
-                    return Text("Vous n'avez plus de question pour aujourd'hui avec un score de : "+_score.toString());
+                    return Text("Vous avez gagné : "+_score.toString());
                   }
                   return const Text("Henri");
                 })));

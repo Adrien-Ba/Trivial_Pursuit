@@ -10,10 +10,12 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
       pseudo: json['pseudo'] as String,
       age: json['age'] as int,
       score: json['score'] as int,
+      date: json['date'] as String,
     );
 
 Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
       'pseudo': instance.pseudo,
       'age': instance.age,
       'score': instance.score,
+      'date': instance.date,
     };

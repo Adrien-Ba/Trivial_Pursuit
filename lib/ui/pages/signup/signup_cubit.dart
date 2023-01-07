@@ -23,7 +23,10 @@ class SignUpCubit extends Cubit<SignUpState> {
 
     final uid = await repository.getCurrentUser();
 
-    User user = User(pseudo: pseudo, age: int.parse(age), score: 0);
+    DateTime date = DateTime.now();
+    String dateString = '${date.year}-${date.month}-${date.day-1}';
+
+    User user = User(pseudo: pseudo, age: int.parse(age), score: 0, date: dateString);
 
     await repository.saveUser(uid.toString(), user);
 

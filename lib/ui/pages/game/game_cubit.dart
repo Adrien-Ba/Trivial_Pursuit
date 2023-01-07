@@ -7,6 +7,8 @@ import '../../../data/repositories/profile_repository.dart';
 
 class GameCubit extends Cubit<GameState> {
   final QuestionRepository repository;
+  String _message = "aie";
+
 
   GameCubit({required this.repository}) : super(const Loading());
 
