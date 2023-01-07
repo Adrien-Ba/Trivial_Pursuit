@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:swiping_card_deck/swiping_card_deck.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
+import 'package:trivial_pursuit/data/repositories/login_repository.dart';
 import 'package:trivial_pursuit/data/repositories/question_repository.dart';
 import 'package:trivial_pursuit/ui/pages/game/bloc/game_state.dart';
 import 'package:trivial_pursuit/ui/pages/game/game_cubit.dart';
@@ -29,13 +30,28 @@ class _GamePageState extends State<GamePage> {
   List<String> _currentResponse = [];
   List<Question> _questions = [];
   SwipingDeck? _swipingDeck;
+  late GameCubit _gameCubit;
 
-  void isCorrectAnswer(String answer) {
+  void isCorrectAnswer(String answer, GameCubit gameCubit) {
     setState(() {
       if (answer == _questions[_currentIndex].correct_answer) {
-        _score += 1;
+        switch(_questions[_currentIndex].difficulty) {
+          case "hard": {
+            _score += 3;
+          }
+          break;
+          case "medium": {
+            _score += 2;
+          }
+          break;
+          default: {
+            _score += 1;
+          }
+          break;
+        }
       }
       _currentIndex += 1;
+      gameCubit.endOfFun(_currentIndex, 20,_score);
     });
   }
 
@@ -45,10 +61,10 @@ class _GamePageState extends State<GamePage> {
         create: (context) => QuestionRepository.get(),
         child: BlocProvider(
             create: (context) {
-              var cubit = GameCubit(
+              _gameCubit = GameCubit(
                   repository:
                       RepositoryProvider.of<QuestionRepository>(context));
-              return cubit!..loadQuestions();
+              return _gameCubit!..loadQuestions();
             },
             child: BlocConsumer<GameCubit, GameState>(
                 listener: (context, state) {},
@@ -78,16 +94,20 @@ class _GamePageState extends State<GamePage> {
                               (e) {
                                 return ElevatedButton(
                                     onPressed: () {
-                                      isCorrectAnswer(e);
+                                      isCorrectAnswer(e,_gameCubit);
                                       _swipingDeck!.swipeRight();
                                     },
                                     child: Text(e));
                               },
                             ).toList(),
-                          )
+                          ),
+                          Text("Score :"+_score.toString()),
                         ],
                       ),
                     ]);
+                  }
+                  if(state is EndGame) {
+                    return Text("Vous n'avez plus de question pour aujourd'hui avec un score de : "+_score.toString());
                   }
                   return const Text("Henri");
                 })));

@@ -15,4 +15,5 @@ class GameState with _$GameState{
   const factory GameState.goodAnswer() = GoodAnswer;
   const factory GameState.wrongAnswer() = WrongAnswer;
   const factory GameState.currentQuestion(Question q) = currentQuestion;
+  const factory GameState.endGame() = EndGame;
 }

@@ -25,6 +25,7 @@ mixin _$GameState {
     required TResult Function() goodAnswer,
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +37,7 @@ mixin _$GameState {
     TResult? Function()? goodAnswer,
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +49,7 @@ mixin _$GameState {
     TResult Function()? goodAnswer,
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +62,7 @@ mixin _$GameState {
     required TResult Function(GoodAnswer value) goodAnswer,
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +74,7 @@ mixin _$GameState {
     TResult? Function(GoodAnswer value)? goodAnswer,
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +86,7 @@ mixin _$GameState {
     TResult Function(GoodAnswer value)? goodAnswer,
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -146,6 +152,7 @@ class _$Loading implements Loading {
     required TResult Function() goodAnswer,
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
   }) {
     return loading();
   }
@@ -160,6 +167,7 @@ class _$Loading implements Loading {
     TResult? Function()? goodAnswer,
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
   }) {
     return loading?.call();
   }
@@ -174,6 +182,7 @@ class _$Loading implements Loading {
     TResult Function()? goodAnswer,
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -192,6 +201,7 @@ class _$Loading implements Loading {
     required TResult Function(GoodAnswer value) goodAnswer,
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
   }) {
     return loading(this);
   }
@@ -206,6 +216,7 @@ class _$Loading implements Loading {
     TResult? Function(GoodAnswer value)? goodAnswer,
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
   }) {
     return loading?.call(this);
   }
@@ -220,6 +231,7 @@ class _$Loading implements Loading {
     TResult Function(GoodAnswer value)? goodAnswer,
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -313,6 +325,7 @@ class _$Loaded implements Loaded {
     required TResult Function() goodAnswer,
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
   }) {
     return loader(questions);
   }
@@ -327,6 +340,7 @@ class _$Loaded implements Loaded {
     TResult? Function()? goodAnswer,
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
   }) {
     return loader?.call(questions);
   }
@@ -341,6 +355,7 @@ class _$Loaded implements Loaded {
     TResult Function()? goodAnswer,
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
     required TResult orElse(),
   }) {
     if (loader != null) {
@@ -359,6 +374,7 @@ class _$Loaded implements Loaded {
     required TResult Function(GoodAnswer value) goodAnswer,
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
   }) {
     return loader(this);
   }
@@ -373,6 +389,7 @@ class _$Loaded implements Loaded {
     TResult? Function(GoodAnswer value)? goodAnswer,
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
   }) {
     return loader?.call(this);
   }
@@ -387,6 +404,7 @@ class _$Loaded implements Loaded {
     TResult Function(GoodAnswer value)? goodAnswer,
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
     required TResult orElse(),
   }) {
     if (loader != null) {
@@ -473,6 +491,7 @@ class _$Error implements Error {
     required TResult Function() goodAnswer,
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
   }) {
     return error(message);
   }
@@ -487,6 +506,7 @@ class _$Error implements Error {
     TResult? Function()? goodAnswer,
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
   }) {
     return error?.call(message);
   }
@@ -501,6 +521,7 @@ class _$Error implements Error {
     TResult Function()? goodAnswer,
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -519,6 +540,7 @@ class _$Error implements Error {
     required TResult Function(GoodAnswer value) goodAnswer,
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
   }) {
     return error(this);
   }
@@ -533,6 +555,7 @@ class _$Error implements Error {
     TResult? Function(GoodAnswer value)? goodAnswer,
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
   }) {
     return error?.call(this);
   }
@@ -547,6 +570,7 @@ class _$Error implements Error {
     TResult Function(GoodAnswer value)? goodAnswer,
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -635,6 +659,7 @@ class _$AnswerSelected implements AnswerSelected {
     required TResult Function() goodAnswer,
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
   }) {
     return answerSelected(answer);
   }
@@ -649,6 +674,7 @@ class _$AnswerSelected implements AnswerSelected {
     TResult? Function()? goodAnswer,
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
   }) {
     return answerSelected?.call(answer);
   }
@@ -663,6 +689,7 @@ class _$AnswerSelected implements AnswerSelected {
     TResult Function()? goodAnswer,
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
     required TResult orElse(),
   }) {
     if (answerSelected != null) {
@@ -681,6 +708,7 @@ class _$AnswerSelected implements AnswerSelected {
     required TResult Function(GoodAnswer value) goodAnswer,
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
   }) {
     return answerSelected(this);
   }
@@ -695,6 +723,7 @@ class _$AnswerSelected implements AnswerSelected {
     TResult? Function(GoodAnswer value)? goodAnswer,
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
   }) {
     return answerSelected?.call(this);
   }
@@ -709,6 +738,7 @@ class _$AnswerSelected implements AnswerSelected {
     TResult Function(GoodAnswer value)? goodAnswer,
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
     required TResult orElse(),
   }) {
     if (answerSelected != null) {
@@ -772,6 +802,7 @@ class _$GoodAnswer implements GoodAnswer {
     required TResult Function() goodAnswer,
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
   }) {
     return goodAnswer();
   }
@@ -786,6 +817,7 @@ class _$GoodAnswer implements GoodAnswer {
     TResult? Function()? goodAnswer,
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
   }) {
     return goodAnswer?.call();
   }
@@ -800,6 +832,7 @@ class _$GoodAnswer implements GoodAnswer {
     TResult Function()? goodAnswer,
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
     required TResult orElse(),
   }) {
     if (goodAnswer != null) {
@@ -818,6 +851,7 @@ class _$GoodAnswer implements GoodAnswer {
     required TResult Function(GoodAnswer value) goodAnswer,
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
   }) {
     return goodAnswer(this);
   }
@@ -832,6 +866,7 @@ class _$GoodAnswer implements GoodAnswer {
     TResult? Function(GoodAnswer value)? goodAnswer,
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
   }) {
     return goodAnswer?.call(this);
   }
@@ -846,6 +881,7 @@ class _$GoodAnswer implements GoodAnswer {
     TResult Function(GoodAnswer value)? goodAnswer,
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
     required TResult orElse(),
   }) {
     if (goodAnswer != null) {
@@ -904,6 +940,7 @@ class _$WrongAnswer implements WrongAnswer {
     required TResult Function() goodAnswer,
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
   }) {
     return wrongAnswer();
   }
@@ -918,6 +955,7 @@ class _$WrongAnswer implements WrongAnswer {
     TResult? Function()? goodAnswer,
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
   }) {
     return wrongAnswer?.call();
   }
@@ -932,6 +970,7 @@ class _$WrongAnswer implements WrongAnswer {
     TResult Function()? goodAnswer,
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
     required TResult orElse(),
   }) {
     if (wrongAnswer != null) {
@@ -950,6 +989,7 @@ class _$WrongAnswer implements WrongAnswer {
     required TResult Function(GoodAnswer value) goodAnswer,
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
   }) {
     return wrongAnswer(this);
   }
@@ -964,6 +1004,7 @@ class _$WrongAnswer implements WrongAnswer {
     TResult? Function(GoodAnswer value)? goodAnswer,
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
   }) {
     return wrongAnswer?.call(this);
   }
@@ -978,6 +1019,7 @@ class _$WrongAnswer implements WrongAnswer {
     TResult Function(GoodAnswer value)? goodAnswer,
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
     required TResult orElse(),
   }) {
     if (wrongAnswer != null) {
@@ -1072,6 +1114,7 @@ class _$currentQuestion implements currentQuestion {
     required TResult Function() goodAnswer,
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
   }) {
     return currentQuestion(q);
   }
@@ -1086,6 +1129,7 @@ class _$currentQuestion implements currentQuestion {
     TResult? Function()? goodAnswer,
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
   }) {
     return currentQuestion?.call(q);
   }
@@ -1100,6 +1144,7 @@ class _$currentQuestion implements currentQuestion {
     TResult Function()? goodAnswer,
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
     required TResult orElse(),
   }) {
     if (currentQuestion != null) {
@@ -1118,6 +1163,7 @@ class _$currentQuestion implements currentQuestion {
     required TResult Function(GoodAnswer value) goodAnswer,
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
   }) {
     return currentQuestion(this);
   }
@@ -1132,6 +1178,7 @@ class _$currentQuestion implements currentQuestion {
     TResult? Function(GoodAnswer value)? goodAnswer,
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
   }) {
     return currentQuestion?.call(this);
   }
@@ -1146,6 +1193,7 @@ class _$currentQuestion implements currentQuestion {
     TResult Function(GoodAnswer value)? goodAnswer,
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
     required TResult orElse(),
   }) {
     if (currentQuestion != null) {
@@ -1162,4 +1210,140 @@ abstract class currentQuestion implements GameState {
   @JsonKey(ignore: true)
   _$$currentQuestionCopyWith<_$currentQuestion> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EndGameCopyWith<$Res> {
+  factory _$$EndGameCopyWith(_$EndGame value, $Res Function(_$EndGame) then) =
+      __$$EndGameCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EndGameCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$EndGame>
+    implements _$$EndGameCopyWith<$Res> {
+  __$$EndGameCopyWithImpl(_$EndGame _value, $Res Function(_$EndGame) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EndGame implements EndGame {
+  const _$EndGame();
+
+  @override
+  String toString() {
+    return 'GameState.endGame()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EndGame);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function(ListQuestions questions) loader,
+    required TResult Function(String message) error,
+    required TResult Function(String answer) answerSelected,
+    required TResult Function() goodAnswer,
+    required TResult Function() wrongAnswer,
+    required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
+  }) {
+    return endGame();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
+  }) {
+    return endGame?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
+    required TResult orElse(),
+  }) {
+    if (endGame != null) {
+      return endGame();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Loading value) loading,
+    required TResult Function(Loaded value) loader,
+    required TResult Function(Error value) error,
+    required TResult Function(AnswerSelected value) answerSelected,
+    required TResult Function(GoodAnswer value) goodAnswer,
+    required TResult Function(WrongAnswer value) wrongAnswer,
+    required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
+  }) {
+    return endGame(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
+  }) {
+    return endGame?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
+    required TResult orElse(),
+  }) {
+    if (endGame != null) {
+      return endGame(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EndGame implements GameState {
+  const factory EndGame() = _$EndGame;
 }
