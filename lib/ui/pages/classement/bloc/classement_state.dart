@@ -9,7 +9,8 @@ part 'classement_state.freezed.dart';
 class ClassementState with _$ClassementState{
   const factory ClassementState.initial() = Initial;
   const factory ClassementState.loaded({
-    required QuerySnapshot<User> listUsers,
+    required List<User> listUsers,
+    //required List<User> searchList,
 }) = Loaded;
   const factory ClassementState.error() = Error;
 }

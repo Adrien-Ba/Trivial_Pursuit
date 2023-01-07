@@ -19,21 +19,21 @@ mixin _$ClassementState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(QuerySnapshot<User> listUsers) loaded,
+    required TResult Function(List<User> listUsers) loaded,
     required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(QuerySnapshot<User> listUsers)? loaded,
+    TResult? Function(List<User> listUsers)? loaded,
     TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(QuerySnapshot<User> listUsers)? loaded,
+    TResult Function(List<User> listUsers)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) =>
@@ -117,7 +117,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(QuerySnapshot<User> listUsers) loaded,
+    required TResult Function(List<User> listUsers) loaded,
     required TResult Function() error,
   }) {
     return initial();
@@ -127,7 +127,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(QuerySnapshot<User> listUsers)? loaded,
+    TResult? Function(List<User> listUsers)? loaded,
     TResult? Function()? error,
   }) {
     return initial?.call();
@@ -137,7 +137,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(QuerySnapshot<User> listUsers)? loaded,
+    TResult Function(List<User> listUsers)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -191,7 +191,7 @@ abstract class _$$LoadedCopyWith<$Res> {
   factory _$$LoadedCopyWith(_$Loaded value, $Res Function(_$Loaded) then) =
       __$$LoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({QuerySnapshot<User> listUsers});
+  $Res call({List<User> listUsers});
 }
 
 /// @nodoc
@@ -208,9 +208,9 @@ class __$$LoadedCopyWithImpl<$Res>
   }) {
     return _then(_$Loaded(
       listUsers: null == listUsers
-          ? _value.listUsers
+          ? _value._listUsers
           : listUsers // ignore: cast_nullable_to_non_nullable
-              as QuerySnapshot<User>,
+              as List<User>,
     ));
   }
 }
@@ -218,10 +218,16 @@ class __$$LoadedCopyWithImpl<$Res>
 /// @nodoc
 
 class _$Loaded implements Loaded {
-  const _$Loaded({required this.listUsers});
+  const _$Loaded({required final List<User> listUsers})
+      : _listUsers = listUsers;
 
+  final List<User> _listUsers;
   @override
-  final QuerySnapshot<User> listUsers;
+  List<User> get listUsers {
+    if (_listUsers is EqualUnmodifiableListView) return _listUsers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_listUsers);
+  }
 
   @override
   String toString() {
@@ -233,12 +239,13 @@ class _$Loaded implements Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Loaded &&
-            (identical(other.listUsers, listUsers) ||
-                other.listUsers == listUsers));
+            const DeepCollectionEquality()
+                .equals(other._listUsers, _listUsers));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, listUsers);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_listUsers));
 
   @JsonKey(ignore: true)
   @override
@@ -250,7 +257,7 @@ class _$Loaded implements Loaded {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(QuerySnapshot<User> listUsers) loaded,
+    required TResult Function(List<User> listUsers) loaded,
     required TResult Function() error,
   }) {
     return loaded(listUsers);
@@ -260,7 +267,7 @@ class _$Loaded implements Loaded {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(QuerySnapshot<User> listUsers)? loaded,
+    TResult? Function(List<User> listUsers)? loaded,
     TResult? Function()? error,
   }) {
     return loaded?.call(listUsers);
@@ -270,7 +277,7 @@ class _$Loaded implements Loaded {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(QuerySnapshot<User> listUsers)? loaded,
+    TResult Function(List<User> listUsers)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -316,10 +323,9 @@ class _$Loaded implements Loaded {
 }
 
 abstract class Loaded implements ClassementState {
-  const factory Loaded({required final QuerySnapshot<User> listUsers}) =
-      _$Loaded;
+  const factory Loaded({required final List<User> listUsers}) = _$Loaded;
 
-  QuerySnapshot<User> get listUsers;
+  List<User> get listUsers;
   @JsonKey(ignore: true)
   _$$LoadedCopyWith<_$Loaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -362,7 +368,7 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(QuerySnapshot<User> listUsers) loaded,
+    required TResult Function(List<User> listUsers) loaded,
     required TResult Function() error,
   }) {
     return error();
@@ -372,7 +378,7 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(QuerySnapshot<User> listUsers)? loaded,
+    TResult? Function(List<User> listUsers)? loaded,
     TResult? Function()? error,
   }) {
     return error?.call();
@@ -382,7 +388,7 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(QuerySnapshot<User> listUsers)? loaded,
+    TResult Function(List<User> listUsers)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
