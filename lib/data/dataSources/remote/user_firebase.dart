@@ -35,6 +35,10 @@ class UserFirebase {
     await _userRef.doc(uid).set(user);
   }
 
+  Future<void> setUserScore(String uid, int score) async {
+    await _userRef.doc(uid).update({"score" : score});
+  }
+
   Future<QuerySnapshot<User>> getUsers() async {
     QuerySnapshot<User> response = await _userRef.get();
     return response;
