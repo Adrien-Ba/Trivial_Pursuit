@@ -1,9 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:trivial_pursuit/data/repositories/profile_repository.dart';
 import 'package:trivial_pursuit/ui/pages/profile/bloc/profile_state.dart';
 import 'package:trivial_pursuit/ui/pages/profile/profile_cubit.dart';
+import 'package:trivial_pursuit/data/entities/user.dart' as profileUser;
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -14,6 +16,7 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   ProfileCubit? _profileCubit;
+  late profileUser.User _user;
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +38,7 @@ class _ProfileState extends State<Profile> {
               Text("testeeee");//TODO inutile, le state ne peux pas être initial car si deconencte , redirect vers login
             }
             if(state is Loaded) {
+              _user = state.user;
               return Column(
                 children: [
                   Padding(
@@ -51,16 +55,16 @@ class _ProfileState extends State<Profile> {
                     ),
                   ),
                   const Divider(),
-                  const Padding(
-                    padding: const EdgeInsets.all(8.0),
+                   Padding(
+                    padding:  const EdgeInsets.all(8.0),
                     child: Text(
-                        'Adrien Bassail', style: TextStyle(fontSize: 30)),
+                        _user.pseudo, style: const TextStyle(fontSize: 30)),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: const Align(
+                    child: Align(
                         alignment: Alignment.centerLeft,
-                        child: Text('Mon score : 4269 points',
+                        child: Text('Mon score : ' + _user.score.toString() + ' points.',
                             style: TextStyle(fontSize: 20))),
                   ),
                   const Divider(),
