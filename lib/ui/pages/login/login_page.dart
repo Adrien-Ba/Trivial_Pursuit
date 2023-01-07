@@ -32,11 +32,9 @@ class _LoginPageState extends State<LoginPage> {
     return RepositoryProvider(
         create: (context) => LoginRepository.get(),
         child: BlocProvider(
-          create: (context) {
-            _loginCubit = LoginCubit(
-                repository: RepositoryProvider.of<LoginRepository>(context));
-            return _loginCubit!..getCurrentUser();
-          },
+          create: (context) => LoginCubit(
+            repository: context.read<LoginRepository>()..getCurrentUser(),
+          ),
           child: BlocConsumer<LoginCubit, LoginState>(
             listener: (context, state) => state.maybeMap(
               correct: (value) => context.go("/game"),
@@ -67,8 +65,9 @@ class _LoginPageState extends State<LoginPage> {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              _loginCubit!.signIn(emailController.text,
-                                  passwordController.text);
+                              context.read<LoginCubit>().signIn(emailController.text, passwordController.text);
+                              //_loginCubit!.signIn(emailController.text,
+                              //    passwordController.text);
                               //.signIn("toto@toto.fr", "totototo");
                               //_loginCubit!.logout();
                             },
