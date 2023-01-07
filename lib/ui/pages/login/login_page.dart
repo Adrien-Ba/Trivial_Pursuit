@@ -46,46 +46,66 @@ class _LoginPageState extends State<LoginPage> {
               if (state is Initial) {
                 return Scaffold(
                   appBar: AppBar(
-                    title: const Text('Connexion'),
+                    title: const Text('Trivial Pursuit : Bienvenue'),
+
                   ),
-                  body: Column(
-                    children: [
-                      TextField(
-                        controller: emailController,
-                        decoration: const InputDecoration(
-                          labelText: "Email",
-                        ),
-                      ),
-                      TextField(
-                        controller: passwordController,
-                        decoration: const InputDecoration(
-                          labelText: "Password",
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              _loginCubit!.signIn(emailController.text,
-                                  passwordController.text);
-                              //.signIn("toto@toto.fr", "totototo");
-                              //_loginCubit!.logout();
-                            },
-                            child: const Text("Se connecter"),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(16.0),
-                          ),
-                          GestureDetector(
-                            child: Text("Pour créer un compte, cliquez ICI"),
-                            onTap: () {
-                              context.go("/signUp");
-                            },
-                          )
-                        ],
+                  body: Container(
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/bg_1.jpg"),
+                        fit: BoxFit.cover,
                       )
-                    ],
+                    ),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(24.0),
+                          child: TextField(
+                            controller: emailController,
+                            decoration: const InputDecoration(
+                              labelText: "Email",
+                              fillColor: Colors.white70,
+                              filled: true,
+                            ),
+
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
+                          child: TextField(
+                            controller: passwordController,
+                            decoration: const InputDecoration(
+                              labelText: "Password",
+                              fillColor: Colors.white70,
+                              filled: true,
+                            ),
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {
+                                _loginCubit!.signIn(emailController.text,
+                                    passwordController.text);
+                                //.signIn("toto@toto.fr", "totototo");
+                                //_loginCubit!.logout();
+                              },
+                              child: const Text("Se connecter"),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(16.0),
+                            ),
+                            GestureDetector(
+                              child: Text("Pour créer un compte, cliquez ICI"),
+                              onTap: () {
+                                context.go("/signUp");
+                              },
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 );
               }

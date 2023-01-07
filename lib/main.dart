@@ -17,6 +17,7 @@ void main() async{
   runApp(MyApp());
 }
 
+
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
@@ -60,7 +61,8 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
+
       ),
       routeInformationProvider: _router.routeInformationProvider,
       routeInformationParser: _router.routeInformationParser,
