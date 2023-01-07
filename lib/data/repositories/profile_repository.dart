@@ -26,5 +26,10 @@ class ProfileRepository {
     await _authFirebase!.logOut();
   }
 
+  Future<String?> getCurrentUser() async {
+    return await _authFirebase?.getCurrentUser();
+  }
+
+
 
 }

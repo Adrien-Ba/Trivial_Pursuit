@@ -8,9 +8,11 @@ class ProfileCubit extends Cubit<ProfileState> {
 
   ProfileCubit({required this.repository}) : super(const Initial());
 
-  void getProfile(String uid) async {
+  void getProfile() async {
+
+    final uid = await repository.getCurrentUser();
     try {
-      final userRep = await repository.getUser(uid);
+      final userRep = await repository.getUser(uid!);
       if(userRep != null) {
         emit(Loaded(user : userRep));
       } else {
@@ -20,6 +22,12 @@ class ProfileCubit extends Cubit<ProfileState> {
       emit(Disconnected());
     }
   }
+  Future<String?> getCurrentUser() async {
+    final response = await repository.getCurrentUser();
+    return response;
+  }
+
+
 
   void logout() async {
     await repository.logOut();

@@ -10,17 +10,17 @@ class ClassementCubit extends Cubit<ClassementState> {
   ClassementCubit({required this.repository}) : super(const Initial());
 
   void getUsers() async {
-    //final users = await repository.getUsers();
-    //if(users !=null) {
-    //  List<User> listUsers = [];
-    //  //List<User> searchList = [];
-    //  for (var element in users.docs) {
-    //    listUsers.add(element.data());
-    //  }
-    //  listUsers.sort((a, b) => b.score.compareTo(a.score));
-    //  emit(Loaded(listUsers : listUsers));
-    //} else {
-    //  emit(Error());
-   // }
+    final users = await repository.getUsers();
+    if (users != null) {
+      List<User> listUsers = [];
+      List<User> searchList = [];
+      for (var element in users.docs) {
+        listUsers.add(element.data());
+      }
+      listUsers.sort((a, b) => b.score.compareTo(a.score));
+      emit(Loaded(listUsers: listUsers));
+    } else {
+      emit(Error());
+    }
   }
 }

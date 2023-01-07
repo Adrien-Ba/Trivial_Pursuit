@@ -15,7 +15,7 @@ class GamePage extends StatefulWidget {
   State<GamePage> createState() => _GamePageState();
 }
 
-SwipingDeck? _swipingDeck;
+
 
 List<String> shuffleAnswers(Question currentQuestion) {
   return [currentQuestion.correct_answer, ...currentQuestion.incorrect_answers]
@@ -28,6 +28,7 @@ class _GamePageState extends State<GamePage> {
   int _score = 0;
   List<String> _currentResponse = [];
   List<Question> _questions = [];
+  SwipingDeck? _swipingDeck;
 
   void isCorrectAnswer(String answer) {
     setState(() {

@@ -23,7 +23,7 @@ class _ProfileState extends State<Profile> {
         create: (context) {
           _profileCubit = ProfileCubit(
               repository: RepositoryProvider.of<ProfileRepository>(context));
-        return _profileCubit!..getProfile("r7n4AmarvofFxx9LpXF2D8ALfTk1");
+        return _profileCubit!..getProfile();
           },
         child: BlocConsumer<ProfileCubit, ProfileState>(
           listener: (context, state) => state.maybeMap(
