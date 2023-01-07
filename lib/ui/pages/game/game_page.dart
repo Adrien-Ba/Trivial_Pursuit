@@ -18,7 +18,7 @@ class GamePage extends StatefulWidget {
 SwipingDeck? _swipingDeck;
 
 List<String> shuffleAnswers(Question currentQuestion) {
-  return [currentQuestion.correctAnswer, ...currentQuestion.incorrectAnswers]
+  return [currentQuestion.correct_answer, ...currentQuestion.incorrect_answers]
       .toList()
     ..shuffle();
 }
@@ -31,7 +31,7 @@ class _GamePageState extends State<GamePage> {
 
   void isCorrectAnswer(String answer) {
     setState(() {
-      if (answer == _questions[_currentIndex].correctAnswer) {
+      if (answer == _questions[_currentIndex].correct_answer) {
         _score += 1;
       }
       _currentIndex += 1;
@@ -95,7 +95,7 @@ class _GamePageState extends State<GamePage> {
   //Pour appeler le router :
 
   void createQuestion(Question question) {
-    _currentResponse = [...question.incorrectAnswers!, question.correctAnswer!]
+    _currentResponse = [...question.incorrect_answers!, question.correct_answer!]
       ..shuffle()
       ..toList();
   }
