@@ -31,6 +31,11 @@ class UserFirebase {
     return null;
   }
 
+  Future<QuerySnapshot<User>> getUsers() async {
+    QuerySnapshot<User> response = await _userRef.get();
+    return response;
+  }
+
 
 }
 
