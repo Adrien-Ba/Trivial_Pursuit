@@ -13,7 +13,7 @@ class QuestionFirebase {
   static QuestionFirebase getInstance() {
     if(_instance == null) {
       _questionRef = _firebaseFirestore
-          .collection('list_questions')
+          .collection('questionOfTheDay')
           .withConverter<ListQuestions>(
           fromFirestore: (snapshot, _) =>
               ListQuestions.fromJson(snapshot.data()!),

@@ -13,7 +13,7 @@ class UserFirebase {
   static UserFirebase getInstance() {
     if(_instance == null) {
       _userRef = _firebaseFirestore
-          .collection('user')
+          .collection('users')
           .withConverter<User>
         (fromFirestore: (snapshot, _) =>
           User.fromJson(snapshot.data()!),

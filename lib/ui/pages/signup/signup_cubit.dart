@@ -24,6 +24,9 @@ class SignUpCubit extends Cubit<SignUpState> {
     if(age == "") {
       return "Veuillez renseigner votre age";
     }
+    if(password != passwordBis) {
+      return "Les mots de passe doivent correspondre";
+    }
 
     final response = await repository.signUp(email, password);
     if(response==null) {
