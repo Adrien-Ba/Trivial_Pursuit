@@ -23,7 +23,7 @@ class SignUpRepository {
     try {
       await _authFirebase!.signUp(email, password);
     } on FirebaseAuthException catch (e) {
-      return e.message;
+      return e.code;
     }
   }
 

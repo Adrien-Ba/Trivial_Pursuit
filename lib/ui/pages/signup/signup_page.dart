@@ -99,7 +99,6 @@ class _SignUpPageState extends State<SignUpPage> {
                             labelText: "Email",
                             fillColor: Colors.white70,
                             filled:true,
-                            errorText: _redError(),
                           ),
                         ),
                       ),
@@ -112,7 +111,6 @@ class _SignUpPageState extends State<SignUpPage> {
                             labelText: "Password",
                             fillColor: Colors.white70,
                             filled:true,
-                            errorText: _redError(),
                           ),
                         ),
                       ),
@@ -125,7 +123,6 @@ class _SignUpPageState extends State<SignUpPage> {
                             labelText: "Repeat password",
                             fillColor: Colors.white70,
                             filled:true,
-                            errorText: _redError(),
                           ),
                         ),
                       ),
@@ -137,7 +134,6 @@ class _SignUpPageState extends State<SignUpPage> {
                             labelText: "Pseudo",
                             fillColor: Colors.white70,
                             filled:true,
-                            errorText: _redError(),
                           ),
                         ),
                       ),
@@ -150,9 +146,12 @@ class _SignUpPageState extends State<SignUpPage> {
                             labelText: "Age",
                             fillColor: Colors.white70,
                             filled:true,
-                            errorText: _redMessage(),
                           ),
                         ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(_errorMessage, style: TextStyle(color: Colors.red)),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -171,7 +170,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   }
                                 });
                               },
-                              child: const Text("Créer mon compte"))
+                              child: const Text("Créer mon compte"),)
                         ],
                       ),
                       Padding(

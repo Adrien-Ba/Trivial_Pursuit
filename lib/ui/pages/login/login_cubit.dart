@@ -13,7 +13,19 @@ class LoginCubit extends Cubit<LoginState> {
       emit(Correct());
       return "";
     } else {
-      //emit(Incorrect());
+      if(response == "unknown") {
+        return "Veuillez renseigner email & mot de passe";
+      }
+      if(response == "invalid-email") {
+        return "L'email renseigné n'exisite pas";
+      }
+      if(response == "user-not-found") {
+        return "L'email renseigné est inconnu";
+      }
+      if(response == "wrong-password") {
+        return "Le mot de passe est inconnu";
+      }
+
       return response;
     }
   }

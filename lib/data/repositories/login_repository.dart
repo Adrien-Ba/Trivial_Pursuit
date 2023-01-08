@@ -27,7 +27,7 @@ class LoginRepository {
     try {
       await _authFirebase!.signIn(email, password);
     } on FirebaseAuthException catch (e) {
-      return e.message;
+      return e.code;
     }
   }
 

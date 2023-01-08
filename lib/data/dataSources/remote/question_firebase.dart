@@ -24,6 +24,7 @@ class QuestionFirebase {
   }
 
   Future<void> insertQuestions(ListQuestions questions) async {
+
     await _questionRef.doc(_getDate()).set(questions);
   }
 

@@ -18,7 +18,15 @@ class SignUpCubit extends Cubit<SignUpState> {
   }
 
   Future<String> createAccount(String email, String password, String passwordBis, String pseudo, String age) async {
-    if(await repository.signUp(email, password)=="") {
+    if(pseudo == "") {
+      return "Veuillez renseigner un pseudo";
+    }
+    if(age == "") {
+      return "Veuillez renseigner votre age";
+    }
+
+    final response = await repository.signUp(email, password);
+    if(response==null) {
       final uid = await repository.getCurrentUser();
 
       DateTime date = DateTime.now();
@@ -31,7 +39,19 @@ class SignUpCubit extends Cubit<SignUpState> {
       emit(Valid());
       return "";
     } else {
-      return "Problème dans le formulaire";
+      if(response == "unknown") {
+        return "Veuillez renseigner tous les champs";
+      }
+      if(response == "weak-password") {
+        return "Le mot de passe doit contenir 6 caractères" ;
+      }
+      if(response == "email-already-in-use") {
+        return "Cet utilisateur exisite déjà" ;
+      }
+      if(response == "invalid-email") {
+        return "L'email renseigné n'existe pas";
+      }
+      return response;
     }
 
   }
