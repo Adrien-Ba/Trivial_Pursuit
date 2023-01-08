@@ -16,7 +16,7 @@ class QuestionApi {
 
 
   var url =
-  Uri.parse('https://opentdb.com/api.php?amount=20');
+  Uri.parse('https://opentdb.com/api.php?amount=10');
 
   Future<ListQuestions?> getQuestions() async {
     var responseApi = await http.get(url);
