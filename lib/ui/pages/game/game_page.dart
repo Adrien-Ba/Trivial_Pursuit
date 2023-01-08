@@ -108,6 +108,10 @@ class _GamePageState extends State<GamePage> {
                   }
                   if(state is EndGame) {
                     return Text("Vous avez gagné : "+_score.toString());
+
+                  }
+                  if(state is AlreadyPlayed) {
+                    return Text("Vous avez déjà joué ! Revenez demain");
                   }
                   return const Text("Henri");
                 })));

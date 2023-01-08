@@ -26,6 +26,7 @@ mixin _$GameState {
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
     required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +39,7 @@ mixin _$GameState {
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
     TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +52,7 @@ mixin _$GameState {
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
     TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -63,6 +66,7 @@ mixin _$GameState {
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
     required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +79,7 @@ mixin _$GameState {
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
     TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,6 +92,7 @@ mixin _$GameState {
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
     TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -153,6 +159,7 @@ class _$Loading implements Loading {
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
     required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
   }) {
     return loading();
   }
@@ -168,6 +175,7 @@ class _$Loading implements Loading {
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
     TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
   }) {
     return loading?.call();
   }
@@ -183,6 +191,7 @@ class _$Loading implements Loading {
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
     TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -202,6 +211,7 @@ class _$Loading implements Loading {
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
     required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
   }) {
     return loading(this);
   }
@@ -217,6 +227,7 @@ class _$Loading implements Loading {
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
     TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
   }) {
     return loading?.call(this);
   }
@@ -232,6 +243,7 @@ class _$Loading implements Loading {
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
     TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -326,6 +338,7 @@ class _$Loaded implements Loaded {
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
     required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
   }) {
     return loader(questions);
   }
@@ -341,6 +354,7 @@ class _$Loaded implements Loaded {
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
     TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
   }) {
     return loader?.call(questions);
   }
@@ -356,6 +370,7 @@ class _$Loaded implements Loaded {
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
     TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (loader != null) {
@@ -375,6 +390,7 @@ class _$Loaded implements Loaded {
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
     required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
   }) {
     return loader(this);
   }
@@ -390,6 +406,7 @@ class _$Loaded implements Loaded {
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
     TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
   }) {
     return loader?.call(this);
   }
@@ -405,6 +422,7 @@ class _$Loaded implements Loaded {
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
     TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (loader != null) {
@@ -492,6 +510,7 @@ class _$Error implements Error {
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
     required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
   }) {
     return error(message);
   }
@@ -507,6 +526,7 @@ class _$Error implements Error {
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
     TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
   }) {
     return error?.call(message);
   }
@@ -522,6 +542,7 @@ class _$Error implements Error {
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
     TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -541,6 +562,7 @@ class _$Error implements Error {
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
     required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
   }) {
     return error(this);
   }
@@ -556,6 +578,7 @@ class _$Error implements Error {
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
     TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
   }) {
     return error?.call(this);
   }
@@ -571,6 +594,7 @@ class _$Error implements Error {
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
     TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -660,6 +684,7 @@ class _$AnswerSelected implements AnswerSelected {
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
     required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
   }) {
     return answerSelected(answer);
   }
@@ -675,6 +700,7 @@ class _$AnswerSelected implements AnswerSelected {
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
     TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
   }) {
     return answerSelected?.call(answer);
   }
@@ -690,6 +716,7 @@ class _$AnswerSelected implements AnswerSelected {
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
     TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (answerSelected != null) {
@@ -709,6 +736,7 @@ class _$AnswerSelected implements AnswerSelected {
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
     required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
   }) {
     return answerSelected(this);
   }
@@ -724,6 +752,7 @@ class _$AnswerSelected implements AnswerSelected {
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
     TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
   }) {
     return answerSelected?.call(this);
   }
@@ -739,6 +768,7 @@ class _$AnswerSelected implements AnswerSelected {
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
     TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (answerSelected != null) {
@@ -803,6 +833,7 @@ class _$GoodAnswer implements GoodAnswer {
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
     required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
   }) {
     return goodAnswer();
   }
@@ -818,6 +849,7 @@ class _$GoodAnswer implements GoodAnswer {
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
     TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
   }) {
     return goodAnswer?.call();
   }
@@ -833,6 +865,7 @@ class _$GoodAnswer implements GoodAnswer {
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
     TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (goodAnswer != null) {
@@ -852,6 +885,7 @@ class _$GoodAnswer implements GoodAnswer {
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
     required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
   }) {
     return goodAnswer(this);
   }
@@ -867,6 +901,7 @@ class _$GoodAnswer implements GoodAnswer {
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
     TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
   }) {
     return goodAnswer?.call(this);
   }
@@ -882,6 +917,7 @@ class _$GoodAnswer implements GoodAnswer {
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
     TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (goodAnswer != null) {
@@ -941,6 +977,7 @@ class _$WrongAnswer implements WrongAnswer {
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
     required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
   }) {
     return wrongAnswer();
   }
@@ -956,6 +993,7 @@ class _$WrongAnswer implements WrongAnswer {
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
     TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
   }) {
     return wrongAnswer?.call();
   }
@@ -971,6 +1009,7 @@ class _$WrongAnswer implements WrongAnswer {
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
     TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (wrongAnswer != null) {
@@ -990,6 +1029,7 @@ class _$WrongAnswer implements WrongAnswer {
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
     required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
   }) {
     return wrongAnswer(this);
   }
@@ -1005,6 +1045,7 @@ class _$WrongAnswer implements WrongAnswer {
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
     TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
   }) {
     return wrongAnswer?.call(this);
   }
@@ -1020,6 +1061,7 @@ class _$WrongAnswer implements WrongAnswer {
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
     TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (wrongAnswer != null) {
@@ -1115,6 +1157,7 @@ class _$currentQuestion implements currentQuestion {
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
     required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
   }) {
     return currentQuestion(q);
   }
@@ -1130,6 +1173,7 @@ class _$currentQuestion implements currentQuestion {
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
     TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
   }) {
     return currentQuestion?.call(q);
   }
@@ -1145,6 +1189,7 @@ class _$currentQuestion implements currentQuestion {
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
     TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (currentQuestion != null) {
@@ -1164,6 +1209,7 @@ class _$currentQuestion implements currentQuestion {
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
     required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
   }) {
     return currentQuestion(this);
   }
@@ -1179,6 +1225,7 @@ class _$currentQuestion implements currentQuestion {
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
     TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
   }) {
     return currentQuestion?.call(this);
   }
@@ -1194,6 +1241,7 @@ class _$currentQuestion implements currentQuestion {
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
     TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (currentQuestion != null) {
@@ -1256,6 +1304,7 @@ class _$EndGame implements EndGame {
     required TResult Function() wrongAnswer,
     required TResult Function(Question q) currentQuestion,
     required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
   }) {
     return endGame();
   }
@@ -1271,6 +1320,7 @@ class _$EndGame implements EndGame {
     TResult? Function()? wrongAnswer,
     TResult? Function(Question q)? currentQuestion,
     TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
   }) {
     return endGame?.call();
   }
@@ -1286,6 +1336,7 @@ class _$EndGame implements EndGame {
     TResult Function()? wrongAnswer,
     TResult Function(Question q)? currentQuestion,
     TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (endGame != null) {
@@ -1305,6 +1356,7 @@ class _$EndGame implements EndGame {
     required TResult Function(WrongAnswer value) wrongAnswer,
     required TResult Function(currentQuestion value) currentQuestion,
     required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
   }) {
     return endGame(this);
   }
@@ -1320,6 +1372,7 @@ class _$EndGame implements EndGame {
     TResult? Function(WrongAnswer value)? wrongAnswer,
     TResult? Function(currentQuestion value)? currentQuestion,
     TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
   }) {
     return endGame?.call(this);
   }
@@ -1335,6 +1388,7 @@ class _$EndGame implements EndGame {
     TResult Function(WrongAnswer value)? wrongAnswer,
     TResult Function(currentQuestion value)? currentQuestion,
     TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
     required TResult orElse(),
   }) {
     if (endGame != null) {
@@ -1346,4 +1400,148 @@ class _$EndGame implements EndGame {
 
 abstract class EndGame implements GameState {
   const factory EndGame() = _$EndGame;
+}
+
+/// @nodoc
+abstract class _$$AlreadyPlayedCopyWith<$Res> {
+  factory _$$AlreadyPlayedCopyWith(
+          _$AlreadyPlayed value, $Res Function(_$AlreadyPlayed) then) =
+      __$$AlreadyPlayedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AlreadyPlayedCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$AlreadyPlayed>
+    implements _$$AlreadyPlayedCopyWith<$Res> {
+  __$$AlreadyPlayedCopyWithImpl(
+      _$AlreadyPlayed _value, $Res Function(_$AlreadyPlayed) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AlreadyPlayed implements AlreadyPlayed {
+  const _$AlreadyPlayed();
+
+  @override
+  String toString() {
+    return 'GameState.alreadyPlayed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AlreadyPlayed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function(ListQuestions questions) loader,
+    required TResult Function(String message) error,
+    required TResult Function(String answer) answerSelected,
+    required TResult Function() goodAnswer,
+    required TResult Function() wrongAnswer,
+    required TResult Function(Question q) currentQuestion,
+    required TResult Function() endGame,
+    required TResult Function() alreadyPlayed,
+  }) {
+    return alreadyPlayed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loading,
+    TResult? Function(ListQuestions questions)? loader,
+    TResult? Function(String message)? error,
+    TResult? Function(String answer)? answerSelected,
+    TResult? Function()? goodAnswer,
+    TResult? Function()? wrongAnswer,
+    TResult? Function(Question q)? currentQuestion,
+    TResult? Function()? endGame,
+    TResult? Function()? alreadyPlayed,
+  }) {
+    return alreadyPlayed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function(ListQuestions questions)? loader,
+    TResult Function(String message)? error,
+    TResult Function(String answer)? answerSelected,
+    TResult Function()? goodAnswer,
+    TResult Function()? wrongAnswer,
+    TResult Function(Question q)? currentQuestion,
+    TResult Function()? endGame,
+    TResult Function()? alreadyPlayed,
+    required TResult orElse(),
+  }) {
+    if (alreadyPlayed != null) {
+      return alreadyPlayed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Loading value) loading,
+    required TResult Function(Loaded value) loader,
+    required TResult Function(Error value) error,
+    required TResult Function(AnswerSelected value) answerSelected,
+    required TResult Function(GoodAnswer value) goodAnswer,
+    required TResult Function(WrongAnswer value) wrongAnswer,
+    required TResult Function(currentQuestion value) currentQuestion,
+    required TResult Function(EndGame value) endGame,
+    required TResult Function(AlreadyPlayed value) alreadyPlayed,
+  }) {
+    return alreadyPlayed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Loaded value)? loader,
+    TResult? Function(Error value)? error,
+    TResult? Function(AnswerSelected value)? answerSelected,
+    TResult? Function(GoodAnswer value)? goodAnswer,
+    TResult? Function(WrongAnswer value)? wrongAnswer,
+    TResult? Function(currentQuestion value)? currentQuestion,
+    TResult? Function(EndGame value)? endGame,
+    TResult? Function(AlreadyPlayed value)? alreadyPlayed,
+  }) {
+    return alreadyPlayed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Loading value)? loading,
+    TResult Function(Loaded value)? loader,
+    TResult Function(Error value)? error,
+    TResult Function(AnswerSelected value)? answerSelected,
+    TResult Function(GoodAnswer value)? goodAnswer,
+    TResult Function(WrongAnswer value)? wrongAnswer,
+    TResult Function(currentQuestion value)? currentQuestion,
+    TResult Function(EndGame value)? endGame,
+    TResult Function(AlreadyPlayed value)? alreadyPlayed,
+    required TResult orElse(),
+  }) {
+    if (alreadyPlayed != null) {
+      return alreadyPlayed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AlreadyPlayed implements GameState {
+  const factory AlreadyPlayed() = _$AlreadyPlayed;
 }

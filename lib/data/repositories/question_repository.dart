@@ -1,9 +1,12 @@
+import 'dart:ffi';
+
 import 'package:trivial_pursuit/data/dataSources/remote/auth_firebase.dart';
 import 'package:trivial_pursuit/data/dataSources/remote/question_api.dart';
 import 'package:trivial_pursuit/data/dataSources/remote/question_firebase.dart';
 import 'package:trivial_pursuit/data/dataSources/remote/user_firebase.dart';
 import 'package:trivial_pursuit/data/entities/list_questions.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
+import 'package:trivial_pursuit/data/entities/user.dart';
 
 
 class QuestionRepository {
@@ -51,6 +54,17 @@ class QuestionRepository {
 
   Future<String?> getCurrentUser() async {
     return await _authFirebase?.getCurrentUser();
+  }
+
+  Future<bool> hasAlreadyPlayed(String uid) async {
+    User? user = await _userFirebase?.getUser(uid);
+    DateTime date = DateTime.now();
+    String dateString = '${date.year}-${date.month}-${date.day}';
+    if(user!.date==dateString) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
 }
