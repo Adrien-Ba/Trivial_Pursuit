@@ -53,10 +53,10 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDjMatFIJ8I0AkEQfyE4kkWiSob37dd2-A',
-    appId: '1:683046718785:android:b9f58aab4cd15fa3d565c0',
-    messagingSenderId: '683046718785',
-    projectId: 'trivial-pursuit-44b5d',
-    storageBucket: 'trivial-pursuit-44b5d.appspot.com',
+    apiKey: 'AIzaSyCYtSQWf8DqRZCjG87jmQjye35ooO2fdsE',
+    appId: '1:884902095592:android:1fe1a2332395ea4c2df75d',
+    messagingSenderId: '884902095592',
+    projectId: 'trivia-class-d2d55',
+    storageBucket: 'trivia-class-d2d55.appspot.com',
   );
 }

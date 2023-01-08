@@ -124,9 +124,6 @@ class _LoginPageState extends State<LoginPage> {
                                     _errorMessage = value;
                                   }
                                 });
-
-                                //.signIn("toto@toto.fr", "totototo");
-                                //_loginCubit!.logout();
                               },
                               child: const Text("Se connecter"),
                             ),

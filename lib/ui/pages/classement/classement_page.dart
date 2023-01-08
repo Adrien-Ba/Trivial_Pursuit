@@ -133,7 +133,7 @@ class _ClassementPageState extends State<ClassementPage> {
                     ],
                   );
                 }
-                return Text("error");
+                return const Text("Une erreur est survenue");
               },
             )));
   }

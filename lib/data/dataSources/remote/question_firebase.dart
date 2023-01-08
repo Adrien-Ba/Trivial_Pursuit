@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:trivial_pursuit/data/entities/list_questions.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
+import 'package:intl/intl.dart';
 
 class QuestionFirebase {
   static final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
@@ -42,7 +43,8 @@ class QuestionFirebase {
 
   String _getDate() {
     DateTime today = DateTime.now();
-    return '${today.year}-${today.month}-${today.day}';
+    final DateFormat formatter = DateFormat('yyyy-MM-dd');
+    return formatter.format(today);
   }
 
 }

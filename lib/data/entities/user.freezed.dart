@@ -126,19 +126,21 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
 class _$_User implements _User {
   const _$_User(
       {required this.pseudo,
-      required this.age,
+      this.age = 99,
       required this.score,
-      required this.date});
+      this.date = ""});
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
   @override
   final String pseudo;
   @override
+  @JsonKey()
   final int age;
   @override
   final int score;
   @override
+  @JsonKey()
   final String date;
 
   @override
@@ -178,9 +180,9 @@ class _$_User implements _User {
 abstract class _User implements User {
   const factory _User(
       {required final String pseudo,
-      required final int age,
+      final int age,
       required final int score,
-      required final String date}) = _$_User;
+      final String date}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 

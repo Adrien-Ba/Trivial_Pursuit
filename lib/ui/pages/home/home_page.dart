@@ -17,12 +17,8 @@ class _HomePageState extends State<HomePage> {
     GamePage(),
     ClassementPage(),
     Profile(),
-    //OutlinedButton(onPressed: () {
 
-    //},
-    //child: const Text('Je suis un bouton'))
   ];
-//ON peux utiliser des cards & swippingcarddeck
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
-            _currentIndex = index; // LA VAR DOIT ETRE DECLAREE EN DEHORS DU BUILD
+            _currentIndex = index;
           });
         },
         items: const [

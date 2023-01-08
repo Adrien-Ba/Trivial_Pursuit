@@ -56,7 +56,6 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return RepositoryProvider(
         create: (context) => SignUpRepository.get(),
         child: BlocProvider(
@@ -95,7 +94,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextField(
                           keyboardType: TextInputType.emailAddress,
                           controller: emailController,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             labelText: "Email",
                             fillColor: Colors.white70,
                             filled:true,
@@ -107,7 +106,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextField(
                           controller: passwordController,
                           obscureText: true,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             labelText: "Password",
                             fillColor: Colors.white70,
                             filled:true,
@@ -119,7 +118,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextField(
                           controller: repeatPasswordController,
                           obscureText: true,
-                          decoration:  InputDecoration(
+                          decoration:  const InputDecoration(
                             labelText: "Repeat password",
                             fillColor: Colors.white70,
                             filled:true,
@@ -130,7 +129,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         padding: const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
                         child: TextField(
                           controller: pseudoController,
-                          decoration:  InputDecoration(
+                          decoration:  const InputDecoration(
                             labelText: "Pseudo",
                             fillColor: Colors.white70,
                             filled:true,
@@ -142,7 +141,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextField(
                           controller: ageController,
                           keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             labelText: "Age",
                             fillColor: Colors.white70,
                             filled:true,
@@ -151,7 +150,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(_errorMessage, style: TextStyle(color: Colors.red)),
+                        child: Text(_errorMessage, style: const TextStyle(color: Colors.red)),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

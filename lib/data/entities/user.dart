@@ -12,13 +12,11 @@ class User with _$User {
   /// {@macro user}
   const factory User({
     required String pseudo,
-    required int age,
+    @Default(99) int age,
     required int score,
-    required String date,
+    @Default("") String date,
   }) = _User;
   
     /// Creates a User from Json map
   factory User.fromJson(Map<String, dynamic> data) => _$UserFromJson(data);
 }
-
-//DATE POUR SAVOIR SI C'EST FINI LE JEU DU JOUR

@@ -36,7 +36,7 @@ class _ProfileState extends State<Profile> {
             ),
             builder: (context, state) {
               if (state is Initial) {
-                Text(
+                const Text(
                     "testeeee"); //TODO inutile, le state ne peux pas être initial car si deconencte , redirect vers login
               }
               if (state is Loaded) {
@@ -44,7 +44,7 @@ class _ProfileState extends State<Profile> {
                 return Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(24.0),
+                      padding: const EdgeInsets.all(24.0),
                       child: ProfilePicture(
                           name: _user.pseudo, radius: 50, fontsize: 35),
                     ),
@@ -58,17 +58,15 @@ class _ProfileState extends State<Profile> {
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                              'Mon score : ' +
-                                  _user.score.toString() +
-                                  ' points',
-                              style: TextStyle(fontSize: 20))),
+                              'Mon score : ${_user.score} points',
+                              style: const TextStyle(fontSize: 20))),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Align(
                           alignment: Alignment.centerLeft,
-                          child: Text('Mon age : ' + _user.age.toString() + ' ans',
-                              style: TextStyle(fontSize: 20))),
+                          child: Text('Mon age : ${_user.age} ans',
+                              style: const TextStyle(fontSize: 20))),
                     ),
                     const Divider(),
                     Padding(
@@ -119,45 +117,5 @@ class _ProfileState extends State<Profile> {
             },
           )),
     );
-    /*return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            width: 250,
-            height: 250,
-            decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                    image: NetworkImage(
-                        'https://cdn.shopify.com/s/files/1/0287/6738/7780/products/PORTRAIT-OLLOW-BLEU.png?v=1597638270'),
-                    fit: BoxFit.fill)),
-          ),
-        ),
-        const Divider(),
-        const Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text('Adrien Bassail', style: TextStyle(fontSize: 30)),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: const Align(
-              alignment: Alignment.centerLeft,
-              child: Text('Mon score : 4269 points',
-                  style: TextStyle(fontSize: 20))),
-        ),
-        const Divider(),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: OutlinedButton(
-              onPressed: () {},
-              child: const Text('Déconnexion'),
-            ),
-          ),
-        )
-      ],
-    );*/
   }
 }

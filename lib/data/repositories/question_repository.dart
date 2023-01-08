@@ -7,6 +7,7 @@ import 'package:trivial_pursuit/data/dataSources/remote/user_firebase.dart';
 import 'package:trivial_pursuit/data/entities/list_questions.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
 import 'package:trivial_pursuit/data/entities/user.dart';
+import 'package:intl/intl.dart';
 
 
 class QuestionRepository {
@@ -59,7 +60,8 @@ class QuestionRepository {
   Future<bool> hasAlreadyPlayed(String uid) async {
     User? user = await _userFirebase?.getUser(uid);
     DateTime date = DateTime.now();
-    String dateString = '${date.year}-${date.month}-${date.day}';
+    final DateFormat formatter = DateFormat('yyyy-MM-dd');
+    String dateString =  formatter.format(date);
     if(user!.date==dateString) {
       return false;
     } else {

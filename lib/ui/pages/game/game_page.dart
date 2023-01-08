@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:swiping_card_deck/swiping_card_deck.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
-import 'package:trivial_pursuit/data/repositories/login_repository.dart';
 import 'package:trivial_pursuit/data/repositories/question_repository.dart';
 import 'package:trivial_pursuit/ui/pages/game/bloc/game_state.dart';
 import 'package:trivial_pursuit/ui/pages/game/game_cubit.dart';
-
-import '../../../data/entities/list_questions.dart';
 
 class GamePage extends StatefulWidget {
   const GamePage({super.key});
@@ -162,7 +159,7 @@ class _GamePageState extends State<GamePage> {
                               style: TextStyle(fontSize: 32),
                             ),
                           ),
-                          Divider(),
+                          const Divider(),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
@@ -197,7 +194,7 @@ class _GamePageState extends State<GamePage> {
                               style: TextStyle(fontSize: 32),
                             ),
                           ),
-                          Divider(),
+                          const Divider(),
                           const Padding(
                             padding: EdgeInsets.all(8.0),
                             child: Text("Vous avez déjà joué aujourd'hui.",
