@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:html_unescape/html_unescape.dart';
 import 'package:swiping_card_deck/swiping_card_deck.dart';
 import 'package:trivial_pursuit/data/entities/question.dart';
 import 'package:trivial_pursuit/data/repositories/question_repository.dart';
@@ -26,6 +27,7 @@ class _GamePageState extends State<GamePage> {
   List<Question> _questions = [];
   SwipingDeck? _swipingDeck;
   late GameCubit _gameCubit;
+  var unescape = HtmlUnescape();
 
   void isCorrectAnswer(String answer, GameCubit gameCubit) {
     setState(() {
@@ -48,8 +50,8 @@ class _GamePageState extends State<GamePage> {
             break;
         }
       }
-      if(_currentIndex == 9) {
-        gameCubit.endOfFun(_currentIndex+1, 10, _score);
+      if (_currentIndex == 9) {
+        gameCubit.endOfFun(_currentIndex + 1, 10, _score);
       } else {
         _currentIndex += 1;
       }
@@ -89,7 +91,7 @@ class _GamePageState extends State<GamePage> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Center(
                                   child: Text(
-                                    e.question,
+                                    unescape.convert(e.question),
                                     style: const TextStyle(fontSize: 16),
                                     textAlign: TextAlign.center,
                                   ),
@@ -128,7 +130,7 @@ class _GamePageState extends State<GamePage> {
                                       isCorrectAnswer(e, _gameCubit);
                                       _swipingDeck!.swipeRight();
                                     },
-                                    child: Text(e));
+                                    child: Text(unescape.convert(e)));
                               },
                             ).toList(),
                           ),
@@ -211,25 +213,30 @@ class _GamePageState extends State<GamePage> {
                   }
                   return Container(
                     decoration: const BoxDecoration(
-                      image: DecorationImage(image: AssetImage("assets/images/bg_2.jpg"),
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/bg_2.jpg"),
                           fit: BoxFit.cover),
                     ),
                     child: SizedBox(
                       width: 10000,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: CircularProgressIndicator(),
-                        ),
+                        children: const [
                           Padding(
                             padding: EdgeInsets.all(8.0),
-                            child: Text("Récupération des questions du jour", style: TextStyle(fontSize: 19)),
+                            child: CircularProgressIndicator(),
                           ),
                           Padding(
                             padding: EdgeInsets.all(8.0),
-                            child: Text("Veuillez patienter ...", style: TextStyle(fontSize: 19)),
-                          )],
+                            child: Text("Récupération des questions du jour",
+                                style: TextStyle(fontSize: 19)),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Veuillez patienter ...",
+                                style: TextStyle(fontSize: 19)),
+                          )
+                        ],
                       ),
                     ),
                   );
