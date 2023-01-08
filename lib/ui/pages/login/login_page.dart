@@ -47,33 +47,44 @@ class _LoginPageState extends State<LoginPage> {
                 return Scaffold(
                   appBar: AppBar(
                     title: const Text('Trivial Pursuit : Bienvenue'),
-
                   ),
                   body: Container(
                     decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/bg_1.jpg"),
-                        fit: BoxFit.cover,
-                      )
-                    ),
+                        image: DecorationImage(
+                      image: AssetImage("assets/images/bg_1.jpg"),
+                      fit: BoxFit.cover,
+                    )),
                     child: Column(
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(24.0),
+                          child: Image.asset("assets/images/logo_accueil.png"),
+                        ),
+                        const Padding(
+                            padding: EdgeInsets.fromLTRB(
+                                24.0, 0.0, 24.0, 24.0),
+                          child: Text("Trivial Pursuit",
+                          style: TextStyle(fontSize: 32),),
+                        ),
+                        Padding(
+                          padding:
+                              const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
                           child: TextField(
                             controller: emailController,
+                            keyboardType: TextInputType.emailAddress,
                             decoration: const InputDecoration(
                               labelText: "Email",
                               fillColor: Colors.white70,
                               filled: true,
                             ),
-
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
+                          padding:
+                              const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
                           child: TextField(
                             controller: passwordController,
+                            obscureText: true,
                             decoration: const InputDecoration(
                               labelText: "Password",
                               fillColor: Colors.white70,
@@ -97,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                               padding: EdgeInsets.all(16.0),
                             ),
                             GestureDetector(
-                              child: Text("Pour créer un compte, cliquez ICI"),
+                              child: const Text("Pour créer un compte, cliquez ICI", style: TextStyle(color: Colors.blueAccent, fontSize: 14),),
                               onTap: () {
                                 context.go("/signUp");
                               },

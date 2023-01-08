@@ -59,57 +59,109 @@ class _SignUpPageState extends State<SignUpPage> {
             builder: (context, state) {
               return Scaffold(
                 appBar: AppBar(
-                  title: const Text('Inscription'),
+                  title: const Text('Trivial Pursuit : Créez votre compte'),
                 ),
-                body: Column(
-                  children: [
-                    TextField(
-                      controller: emailController,
-                      decoration: const InputDecoration(
-                        labelText: "Email",
+                body: Container(
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                    image: AssetImage("assets/images/bg_1.jpg"),
+                    fit: BoxFit.cover,
+                  )),
+                  child: Column(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.all(
+                            24.0),
+                        child: Text("Trivial Pursuit",
+                          style: TextStyle(fontSize: 32),),
                       ),
-                    ),
-                    TextField(
-                      controller: passwordController,
-                      decoration: const InputDecoration(
-                        labelText: "Password",
+                      Padding(
+                        padding:
+                            const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
+                        child: TextField(
+                          keyboardType: TextInputType.emailAddress,
+                          controller: emailController,
+                          decoration: const InputDecoration(
+                            labelText: "Email",
+                            fillColor: Colors.white70,
+                            filled:true,
+                          ),
+                        ),
                       ),
-                    ),
-                    TextField(
-                      controller: repeatPasswordController,
-                      decoration: const InputDecoration(
-                        labelText: "Repeat password",
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
+                        child: TextField(
+                          controller: passwordController,
+                          obscureText: true,
+                          decoration: const InputDecoration(
+                            labelText: "Password",
+                            fillColor: Colors.white70,
+                            filled:true,
+
+                          ),
+                        ),
                       ),
-                    ),
-                    TextField(
-                      controller: pseudoController,
-                      decoration: const InputDecoration(
-                        labelText: "Pseudo",
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
+                        child: TextField(
+                          controller: repeatPasswordController,
+                          obscureText: true,
+                          decoration: const InputDecoration(
+                            labelText: "Repeat password",
+                            fillColor: Colors.white70,
+                            filled:true,
+                          ),
+                        ),
                       ),
-                    ),
-                    TextField(
-                      controller: ageController,
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
-                        labelText: "Age",
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
+                        child: TextField(
+                          controller: pseudoController,
+                          decoration: const InputDecoration(
+                            labelText: "Pseudo",
+                            fillColor: Colors.white70,
+                            filled:true,
+                          ),
+                        ),
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                            onPressed: () {
-                              _signUpCubit?.createAccount(
-                                  emailController.text,
-                                  passwordController.text,
-                                  repeatPasswordController.text,
-                                  pseudoController.text,
-                                  ageController.text);
-                            },
-                            child: const Text("Créer mon compte"))
-                      ],
-                    )
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 16.0),
+                        child: TextField(
+                          controller: ageController,
+                          keyboardType: TextInputType.number,
+                          decoration: const InputDecoration(
+                            labelText: "Age",
+                            fillColor: Colors.white70,
+                            filled:true,
+                          ),
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                              onPressed: () {
+                                _signUpCubit?.createAccount(
+                                    emailController.text,
+                                    passwordController.text,
+                                    repeatPasswordController.text,
+                                    pseudoController.text,
+                                    ageController.text);
+                              },
+                              child: const Text("Créer mon compte"))
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          child: const Text("Vous avez déjà un compte, cliquez ICI", style: TextStyle(color: Colors.blueAccent, fontSize: 14),),
+                          onTap: () {
+                            context.go("/");
+                          },
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               );
               return const Text("CHARHEUUUU");

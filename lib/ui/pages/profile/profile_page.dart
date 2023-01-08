@@ -44,24 +44,10 @@ class _ProfileState extends State<Profile> {
                 return Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(24.0),
                       child: ProfilePicture(
-                          name: _user.pseudo, radius: 31, fontsize: 21),
+                          name: _user.pseudo, radius: 50, fontsize: 35),
                     ),
-                    //Padding(
-                    //  padding: const EdgeInsets.all(8.0),
-                    //  child: Container(
-                    //    width: 250,
-                    //    height: 250,
-                    //    decoration: const BoxDecoration(
-                    //        shape: BoxShape.circle,
-                    //        image: DecorationImage(
-                    //            image: NetworkImage(
-                    //               'https://cdn.shopify.com/s/files/1/0287/6738/7780/products/PORTRAIT-OLLOW-BLEU.png?v=1597638270'),
-                    //            fit: BoxFit.fill)),
-                    //  ),
-                    //),
-                    //const Divider(),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(_user.pseudo,

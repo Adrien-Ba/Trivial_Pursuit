@@ -29,9 +29,12 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Trivial Pursuit'),
       ),
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _content,
+      body: Container(
+        decoration: const BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/bg_2.jpg"),fit: BoxFit.cover)),
+        child: IndexedStack(
+          index: _currentIndex,
+          children: _content,
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,

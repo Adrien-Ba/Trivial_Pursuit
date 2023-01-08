@@ -63,51 +63,71 @@ class _ClassementPageState extends State<ClassementPage> {
                   }
                   return Column(
                     children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          prefixIcon: const Icon(Icons.search),
-                          hintText: 'Rechercher une personne',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20),
-                            borderSide: const BorderSide(color: Colors.blue),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            fillColor: Colors.white70,
+                            filled: true,
+                            prefixIcon: const Icon(Icons.search),
+                            hintText: 'Rechercher une personne',
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: const BorderSide(color: Colors.blue),
+                            ),
                           ),
+                          onChanged: (value) {
+                            searchClassement(state.listUsers, value);
+                          },
                         ),
-                        onChanged: (value) {
-                          searchClassement(state.listUsers, value);
-                        },
                       ),
                       Expanded(
-                          child: ListView.separated(
-                              itemBuilder: (context, index) {
-                                if (index % 2 == 0) {
-                                  return Material(
-                                      child: ListTile(
-                                    title: Text(
-                                        _searchList.elementAt(index).pseudo),
-                                    subtitle: Text(_searchList
-                                        .elementAt(index)
-                                        .score
-                                        .toString()),
-                                    tileColor: Colors.grey[200],
-                                  ));
-                                } else {
-                                  return Material(
-                                      child: ListTile(
-                                    title: Text(
-                                        _searchList.elementAt(index).pseudo),
-                                    subtitle: Text(_searchList
-                                        .elementAt(index)
-                                        .score
-                                        .toString()),
-                                    tileColor: Colors.grey[300],
-                                  ));
-                                }
-                              },
-                              separatorBuilder: (context, index) {
-                                return Divider();
-                              },
-                              itemCount: _searchList
-                                  .length) //OBLIGATOIRE POUR AFFICHER UNE LISTE
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: ListView.separated(
+                                itemBuilder: (context, index) {
+                                  if (index % 2 == 0) {
+                                    return Material(
+                                        child: ListTile(
+                                      title: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                              _searchList.elementAt(index).pseudo),
+                                          Text(_searchList
+                                              .elementAt(index)
+                                              .score
+                                              .toString())
+                                        ],
+                                      ),
+                                      tileColor: Colors.grey[200],
+                                    ));
+                                  } else {
+                                    return Material(
+                                        child: ListTile(
+
+                                          title: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                  _searchList.elementAt(index).pseudo),
+                                              Text(_searchList
+                                                  .elementAt(index)
+                                                  .score
+                                                  .toString())
+                                            ],
+                                          ),
+                                          tileColor: Colors.grey[300],
+                                          
+                                        ));
+                                  }
+                                },
+                                separatorBuilder: (context, index) {
+                                  return Divider();
+                                },
+                                itemCount: _searchList
+                                    .length),
+                          ) //OBLIGATOIRE POUR AFFICHER UNE LISTE
 
                           )
                     ],
