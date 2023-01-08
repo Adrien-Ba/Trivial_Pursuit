@@ -24,6 +24,12 @@ class SignUpCubit extends Cubit<SignUpState> {
     if(age == "") {
       return "Veuillez renseigner votre age";
     }
+    if(int.parse(age)<18) {
+      return "Vous devez être majeur et vacciné pour vous inscrire";
+    }
+    if(int.parse(age)>90) {
+      return "Vous êtes bien trop vieux pour jouer a notre jeu";
+    }
     if(password != passwordBis) {
       return "Les mots de passe doivent correspondre";
     }

@@ -63,6 +63,13 @@ class _ProfileState extends State<Profile> {
                                   ' points',
                               style: TextStyle(fontSize: 20))),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text('Mon age : ' + _user.age.toString() + ' ans',
+                              style: TextStyle(fontSize: 20))),
+                    ),
                     const Divider(),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -82,25 +89,30 @@ class _ProfileState extends State<Profile> {
               ;
               return Container(
                 decoration: const BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/images/bg_2.jpg"),
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/bg_2.jpg"),
                       fit: BoxFit.cover),
                 ),
                 child: SizedBox(
                   width: 10000,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: CircularProgressIndicator(),
-                    ),
+                    children: const [
                       Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Redirection en cours", style: TextStyle(fontSize: 19)),
+                        child: CircularProgressIndicator(),
                       ),
                       Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text("Veuillez patienter ...", style: TextStyle(fontSize: 19)),
-                      )],
+                        child: Text("Redirection en cours",
+                            style: TextStyle(fontSize: 19)),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text("Veuillez patienter ...",
+                            style: TextStyle(fontSize: 19)),
+                      )
+                    ],
                   ),
                 ),
               );
