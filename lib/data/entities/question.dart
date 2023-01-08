@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:html_unescape/html_unescape.dart';
 
  
 part 'question.freezed.dart';
