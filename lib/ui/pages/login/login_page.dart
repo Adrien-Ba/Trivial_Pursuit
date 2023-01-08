@@ -26,6 +26,22 @@ void Login() {}
 
 class _LoginPageState extends State<LoginPage> {
   LoginCubit? _loginCubit;
+  late String _errorMail = "";
+
+  String? _testMail() {
+    if (_errorMail=="") {
+      return null;
+    }
+    return _errorMail;
+  }
+  String? _testPassword() {
+    if (_errorMail=="") {
+      return null;
+    }
+    return "";
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -61,10 +77,11 @@ class _LoginPageState extends State<LoginPage> {
                           child: Image.asset("assets/images/logo_accueil.png"),
                         ),
                         const Padding(
-                            padding: EdgeInsets.fromLTRB(
-                                24.0, 0.0, 24.0, 24.0),
-                          child: Text("Trivial Pursuit",
-                          style: TextStyle(fontSize: 32),),
+                          padding: EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
+                          child: Text(
+                            "Trivial Pursuit",
+                            style: TextStyle(fontSize: 32),
+                          ),
                         ),
                         Padding(
                           padding:
@@ -72,10 +89,11 @@ class _LoginPageState extends State<LoginPage> {
                           child: TextField(
                             controller: emailController,
                             keyboardType: TextInputType.emailAddress,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               labelText: "Email",
                               fillColor: Colors.white70,
                               filled: true,
+                              errorText: _testMail(),
                             ),
                           ),
                         ),
@@ -85,10 +103,11 @@ class _LoginPageState extends State<LoginPage> {
                           child: TextField(
                             controller: passwordController,
                             obscureText: true,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               labelText: "Password",
                               fillColor: Colors.white70,
                               filled: true,
+                              errorText: _testPassword(),
                             ),
                           ),
                         ),
@@ -96,9 +115,16 @@ class _LoginPageState extends State<LoginPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ElevatedButton(
-                              onPressed: () {
-                                _loginCubit!.signIn(emailController.text,
+                              onPressed: () async {
+                                String value = await _loginCubit!.signIn(
+                                    emailController.text,
                                     passwordController.text);
+                                setState(() {
+                                  if (value != "") {
+                                    _errorMail = value;
+                                  }
+                                });
+
                                 //.signIn("toto@toto.fr", "totototo");
                                 //_loginCubit!.logout();
                               },
@@ -108,7 +134,11 @@ class _LoginPageState extends State<LoginPage> {
                               padding: EdgeInsets.all(16.0),
                             ),
                             GestureDetector(
-                              child: const Text("Pour créer un compte, cliquez ICI", style: TextStyle(color: Colors.blueAccent, fontSize: 14),),
+                              child: const Text(
+                                "Pour créer un compte, cliquez ICI",
+                                style: TextStyle(
+                                    color: Colors.blueAccent, fontSize: 14),
+                              ),
                               onTap: () {
                                 context.go("/signUp");
                               },

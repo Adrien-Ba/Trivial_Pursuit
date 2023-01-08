@@ -22,7 +22,7 @@ class AuthFirebase {
     await _authInstance!.createUserWithEmailAndPassword(email: email, password: password);
   }
 
-  Future<void> signIn(String email, String password) async {
+  Future<String?> signIn(String email, String password) async {
     await _authInstance!.signInWithEmailAndPassword(email: email, password: password);
   }
 

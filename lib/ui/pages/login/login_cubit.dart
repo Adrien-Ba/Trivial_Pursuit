@@ -7,12 +7,14 @@ class LoginCubit extends Cubit<LoginState> {
 
   LoginCubit({required this.repository}) : super(const Initial());
 
-  void signIn(String email, String password) async {
+  Future<String> signIn(String email, String password) async {
     final response = await repository.signIn(email, password);
     if (response == null) {
       emit(Correct());
+      return "";
     } else {
-      emit(Incorrect());
+      //emit(Incorrect());
+      return response;
     }
   }
 
