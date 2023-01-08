@@ -17,20 +17,23 @@ class SignUpCubit extends Cubit<SignUpState> {
     emit(Display());
   }
 
-  void createAccount(String email, String password, String passwordBis, String pseudo, String age) async {
+  Future<String> createAccount(String email, String password, String passwordBis, String pseudo, String age) async {
+    if(await repository.signUp(email, password)=="") {
+      final uid = await repository.getCurrentUser();
 
-    await repository.signUp(email, password);
+      DateTime date = DateTime.now();
+      String dateString = '${date.year}-${date.month}-${date.day-1}';
 
-    final uid = await repository.getCurrentUser();
+      User user = User(pseudo: pseudo, age: int.parse(age), score: 0, date: dateString);
 
-    DateTime date = DateTime.now();
-    String dateString = '${date.year}-${date.month}-${date.day-1}';
+      await repository.saveUser(uid.toString(), user);
 
-    User user = User(pseudo: pseudo, age: int.parse(age), score: 0, date: dateString);
+      emit(Valid());
+      return "";
+    } else {
+      return "Problème dans le formulaire";
+    }
 
-    await repository.saveUser(uid.toString(), user);
-
-    emit(Valid());
   }
 
 

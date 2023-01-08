@@ -40,6 +40,20 @@ class _SignUpPageState extends State<SignUpPage> {
     super.dispose();
   }
 
+  late String _errorMessage ="";
+  String? _redMessage() {
+    if (_errorMessage=="") {
+      return null;
+    }
+    return _errorMessage;
+  }
+  String? _redError() {
+    if (_errorMessage=="") {
+      return null;
+    }
+    return "";
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -81,10 +95,11 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextField(
                           keyboardType: TextInputType.emailAddress,
                           controller: emailController,
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                             labelText: "Email",
                             fillColor: Colors.white70,
                             filled:true,
+                            errorText: _redError(),
                           ),
                         ),
                       ),
@@ -93,11 +108,11 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextField(
                           controller: passwordController,
                           obscureText: true,
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                             labelText: "Password",
                             fillColor: Colors.white70,
                             filled:true,
-
+                            errorText: _redError(),
                           ),
                         ),
                       ),
@@ -106,10 +121,11 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextField(
                           controller: repeatPasswordController,
                           obscureText: true,
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             labelText: "Repeat password",
                             fillColor: Colors.white70,
                             filled:true,
+                            errorText: _redError(),
                           ),
                         ),
                       ),
@@ -117,10 +133,11 @@ class _SignUpPageState extends State<SignUpPage> {
                         padding: const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
                         child: TextField(
                           controller: pseudoController,
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             labelText: "Pseudo",
                             fillColor: Colors.white70,
                             filled:true,
+                            errorText: _redError(),
                           ),
                         ),
                       ),
@@ -129,10 +146,11 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextField(
                           controller: ageController,
                           keyboardType: TextInputType.number,
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                             labelText: "Age",
                             fillColor: Colors.white70,
                             filled:true,
+                            errorText: _redMessage(),
                           ),
                         ),
                       ),
@@ -140,13 +158,18 @@ class _SignUpPageState extends State<SignUpPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                              onPressed: () {
-                                _signUpCubit?.createAccount(
+                              onPressed: () async {
+                                String value = await _signUpCubit!.createAccount(
                                     emailController.text,
                                     passwordController.text,
                                     repeatPasswordController.text,
                                     pseudoController.text,
                                     ageController.text);
+                                setState(() {
+                                  if(value!="") {
+                                    _errorMessage = value;
+                                  }
+                                });
                               },
                               child: const Text("Créer mon compte"))
                         ],

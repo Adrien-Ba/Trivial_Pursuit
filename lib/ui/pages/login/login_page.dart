@@ -26,16 +26,16 @@ void Login() {}
 
 class _LoginPageState extends State<LoginPage> {
   LoginCubit? _loginCubit;
-  late String _errorMail = "";
+  late String _errorMessage = "";
 
-  String? _testMail() {
-    if (_errorMail=="") {
+  String? _redMessage() {
+    if (_errorMessage=="") {
       return null;
     }
-    return _errorMail;
+    return _errorMessage;
   }
-  String? _testPassword() {
-    if (_errorMail=="") {
+  String? _redError() {
+    if (_errorMessage=="") {
       return null;
     }
     return "";
@@ -93,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                               labelText: "Email",
                               fillColor: Colors.white70,
                               filled: true,
-                              errorText: _testMail(),
+                              errorText: _redError(),
                             ),
                           ),
                         ),
@@ -107,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                               labelText: "Password",
                               fillColor: Colors.white70,
                               filled: true,
-                              errorText: _testPassword(),
+                              errorText: _redMessage(),
                             ),
                           ),
                         ),
@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                                     passwordController.text);
                                 setState(() {
                                   if (value != "") {
-                                    _errorMail = value;
+                                    _errorMessage = value;
                                   }
                                 });
 

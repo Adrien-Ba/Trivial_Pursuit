@@ -1,7 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:trivial_pursuit/data/dataSources/remote/auth_firebase.dart';
+import 'package:trivial_pursuit/data/entities/user.dart' as user;
 
 import '../dataSources/remote/user_firebase.dart';
-import '../entities/user.dart';
 
 class SignUpRepository {
   static SignUpRepository? _instance;
@@ -18,15 +19,19 @@ class SignUpRepository {
     return _instance!;
   }
 
-  Future<void> signUp(String email, String password) async {
-    await _authFirebase?.signUp(email, password);
+  Future<String?> signUp(String email, String password) async {
+    try {
+      await _authFirebase!.signUp(email, password);
+    } on FirebaseAuthException catch (e) {
+      return e.message;
+    }
   }
 
   Future<String?> getCurrentUser() async {
     return await _authFirebase?.getCurrentUser();
   }
 
-  Future<void> saveUser(String uid, User user) async {
+  Future<void> saveUser(String uid, user.User user) async {
     await _userFirebase?.createUser(uid, user);
   }
 
