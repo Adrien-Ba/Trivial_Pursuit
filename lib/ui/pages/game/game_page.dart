@@ -51,8 +51,11 @@ class _GamePageState extends State<GamePage> {
             break;
         }
       }
-      _currentIndex += 1;
-      gameCubit.endOfFun(_currentIndex, 10, _score);
+      if(_currentIndex == 9) {
+        gameCubit.endOfFun(_currentIndex+1, 10, _score);
+      } else {
+        _currentIndex += 1;
+      }
     });
   }
 
