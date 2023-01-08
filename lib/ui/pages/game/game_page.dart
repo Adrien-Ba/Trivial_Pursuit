@@ -209,7 +209,30 @@ class _GamePageState extends State<GamePage> {
                       ),
                     );
                   }
-                  return const Text("Henri");
+                  return Container(
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/images/bg_2.jpg"),
+                          fit: BoxFit.cover),
+                    ),
+                    child: SizedBox(
+                      width: 10000,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: CircularProgressIndicator(),
+                        ),
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Récupération des questions du jour", style: TextStyle(fontSize: 19)),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Veuillez patienter ...", style: TextStyle(fontSize: 19)),
+                          )],
+                      ),
+                    ),
+                  );
                 })));
   }
 
