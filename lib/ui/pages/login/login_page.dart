@@ -150,7 +150,35 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 );
               }
-              return const Text("Chargement");
+
+              return Scaffold(
+                  appBar: AppBar(
+                    title: const Text('Trivial Pursuit : Connexion'),
+                  ),
+                  body: Container(
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/images/bg_1.jpg"),
+                      fit: BoxFit.cover),
+                    ),
+                    child: SizedBox(
+                      width: 10000,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: CircularProgressIndicator(),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text("Chargement de vos paramètres personnels", style: TextStyle(fontSize: 19)),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text("Veuillez patienter ...", style: TextStyle(fontSize: 19)),
+                        )],
+                      ),
+                    ),
+                  ));
             },
           ),
         ));

@@ -16,8 +16,6 @@ class GamePage extends StatefulWidget {
   State<GamePage> createState() => _GamePageState();
 }
 
-
-
 List<String> shuffleAnswers(Question currentQuestion) {
   return [currentQuestion.correct_answer, ...currentQuestion.incorrect_answers]
       .toList()
@@ -35,23 +33,26 @@ class _GamePageState extends State<GamePage> {
   void isCorrectAnswer(String answer, GameCubit gameCubit) {
     setState(() {
       if (answer == _questions[_currentIndex].correct_answer) {
-        switch(_questions[_currentIndex].difficulty) {
-          case "hard": {
-            _score += 3;
-          }
-          break;
-          case "medium": {
-            _score += 2;
-          }
-          break;
-          default: {
-            _score += 1;
-          }
-          break;
+        switch (_questions[_currentIndex].difficulty) {
+          case "hard":
+            {
+              _score += 3;
+            }
+            break;
+          case "medium":
+            {
+              _score += 2;
+            }
+            break;
+          default:
+            {
+              _score += 1;
+            }
+            break;
         }
       }
       _currentIndex += 1;
-      gameCubit.endOfFun(_currentIndex, 20,_score);
+      gameCubit.endOfFun(_currentIndex, 20, _score);
     });
   }
 
@@ -74,8 +75,27 @@ class _GamePageState extends State<GamePage> {
                     _swipingDeck ??= SwipingCardDeck(
                       cardDeck: _questions.map((e) {
                         return Card(
-                          child: Text(e.question),
-                        );
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(
+                                color: Theme.of(context).colorScheme.outline,
+                              ),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(12)),
+                            ),
+                            child: SizedBox(
+                              width: 300,
+                              height: 100,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(
+                                  child: Text(
+                                    e.question,
+                                    style: const TextStyle(fontSize: 16),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                            ));
                       }).toList(),
                       onLeftSwipe: (Card) {},
                       onRightSwipe: (Card) {},
@@ -84,34 +104,110 @@ class _GamePageState extends State<GamePage> {
                       },
                       cardWidth: 50,
                     );
+
                     return ListView(children: [
                       Column(
                         children: [
-                          _swipingDeck!,
+                          const Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Text("Questions du jour : ",
+                                style: TextStyle(fontSize: 30)),
+                          ),
+                          IgnorePointer(
+                              child: Padding(
+                            padding: const EdgeInsets.fromLTRB(
+                                16.0, 0.0, 16.0, 16.0),
+                            child: Container(child: _swipingDeck!),
+                          )),
                           Column(
                             children:
                                 shuffleAnswers(_questions[_currentIndex]).map(
                               (e) {
                                 return ElevatedButton(
                                     onPressed: () {
-                                      isCorrectAnswer(e,_gameCubit);
+                                      isCorrectAnswer(e, _gameCubit);
                                       _swipingDeck!.swipeRight();
                                     },
                                     child: Text(e));
                               },
                             ).toList(),
                           ),
-                          Text("Score :"+_score.toString()),
+                          Padding(
+                            padding: const EdgeInsets.all(24.0),
+                            child: Text("Score du jour : $_score",
+                                style: const TextStyle(fontSize: 20)),
+                          ),
                         ],
                       ),
                     ]);
                   }
-                  if(state is EndGame) {
-                    return Text("Vous avez gagné : "+_score.toString());
-
+                  if (state is EndGame) {
+                    return SizedBox(
+                      width: 10000,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(24.0),
+                            child:
+                                Image.asset("assets/images/logo_accueil.png"),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 8.0),
+                            child: Text(
+                              "Merci d'avoir joué !",
+                              style: TextStyle(fontSize: 32),
+                            ),
+                          ),
+                          Divider(),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              "Vous avez gagné : $_score points aujourd'hui.",
+                              style: const TextStyle(fontSize: 18),
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Revenez demain pour jouer a nouveau.",
+                                style: TextStyle(fontSize: 18)),
+                          )
+                        ],
+                      ),
+                    );
                   }
-                  if(state is AlreadyPlayed) {
-                    return Text("Vous avez déjà joué ! Revenez demain");
+                  if (state is AlreadyPlayed) {
+                    return SizedBox(
+                      width: 10000,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(24.0),
+                            child:
+                                Image.asset("assets/images/logo_accueil.png"),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 8.0),
+                            child: Text(
+                              "Merci d'avoir joué !",
+                              style: TextStyle(fontSize: 32),
+                            ),
+                          ),
+                          Divider(),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Vous avez déjà joué aujourd'hui.",
+                                style: TextStyle(fontSize: 18)),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Revenez demain pour jouer a nouveau.",
+                                style: TextStyle(fontSize: 18)),
+                          )
+                        ],
+                      ),
+                    );
                   }
                   return const Text("Henri");
                 })));
@@ -120,7 +216,10 @@ class _GamePageState extends State<GamePage> {
   //Pour appeler le router :
 
   void createQuestion(Question question) {
-    _currentResponse = [...question.incorrect_answers!, question.correct_answer!]
+    _currentResponse = [
+      ...question.incorrect_answers!,
+      question.correct_answer!
+    ]
       ..shuffle()
       ..toList();
   }

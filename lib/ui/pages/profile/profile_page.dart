@@ -60,7 +60,7 @@ class _ProfileState extends State<Profile> {
                           child: Text(
                               'Mon score : ' +
                                   _user.score.toString() +
-                                  ' points.',
+                                  ' points',
                               style: TextStyle(fontSize: 20))),
                     ),
                     const Divider(),
