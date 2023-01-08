@@ -7,3 +7,10 @@ Le joueur peux jouer une fois par jour,  et comparer son score avec les autres j
 Auteurs : Adrien Bassail & Henri Boulnis
 
 Cette application a été développée en Flutter, et le backend est géré par Firebase et une API externe. 
+
+
+Pour démarrer l'application : <br/>
+
+```bash
+flutter run --flavour dev
+```
