@@ -23,6 +23,7 @@ List<String> shuffleAnswers(Question currentQuestion) {
 class _GamePageState extends State<GamePage> {
   int _currentIndex = 0;
   int _score = 0;
+  String _repPre = "";
   List<String> _currentResponse = [];
   List<Question> _questions = [];
   SwipingDeck? _swipingDeck;
@@ -53,6 +54,7 @@ class _GamePageState extends State<GamePage> {
       if (_currentIndex == 9) {
         gameCubit.endOfFun(_currentIndex + 1, 10, _score);
       } else {
+        _repPre = _questions[_currentIndex].correct_answer;
         _currentIndex += 1;
       }
     });
@@ -136,8 +138,14 @@ class _GamePageState extends State<GamePage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(24.0),
-                            child: Text("Score du jour : $_score",
-                                style: const TextStyle(fontSize: 20)),
+                            child: Column(
+                              children: [
+                                Text("Score du jour : $_score",
+                                    style: const TextStyle(fontSize: 20)),
+                                Text("$_repPre",
+                                    style: const TextStyle(fontSize: 20))
+                              ],
+                            ),
                           ),
                         ],
                       ),
