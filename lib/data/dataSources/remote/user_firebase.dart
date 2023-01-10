@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-
+import 'package:intl/intl.dart';
 import '../../entities/user.dart';
 
 class UserFirebase {
@@ -38,10 +38,10 @@ class UserFirebase {
   Future<void> setUserScore(String uid, int score) async {
     DocumentSnapshot<User> user = await _userRef.doc(uid).get();
     DateTime date = DateTime.now();
-    String dateString = '${date.year}-${date.month}-${date.day}';
+    final DateFormat formatter = DateFormat('yyyy-MM-dd');
+    String dateString =  formatter.format(date);
     if(user.data()!.date!=dateString) {
-      await _userRef.doc(uid).update(
-          {"score": score + user.data()!.score, "date": dateString});
+      await _userRef.doc(uid).update({"score": score + user.data()!.score, "date": dateString});
     }
   }
 

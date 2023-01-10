@@ -125,19 +125,18 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
 @JsonSerializable()
 class _$_User implements _User {
   const _$_User(
-      {required this.pseudo,
-      this.age = 99,
-      required this.score,
-      this.date = ""});
+      {this.pseudo = "Inconnu", this.age = 99, this.score = 0, this.date = ""});
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
   @override
+  @JsonKey()
   final String pseudo;
   @override
   @JsonKey()
   final int age;
   @override
+  @JsonKey()
   final int score;
   @override
   @JsonKey()
@@ -179,9 +178,9 @@ class _$_User implements _User {
 
 abstract class _User implements User {
   const factory _User(
-      {required final String pseudo,
+      {final String pseudo,
       final int age,
-      required final int score,
+      final int score,
       final String date}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;

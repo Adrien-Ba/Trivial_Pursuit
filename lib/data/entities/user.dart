@@ -11,9 +11,9 @@ part 'user.g.dart';
 class User with _$User {
   /// {@macro user}
   const factory User({
-    required String pseudo,
+    @Default("Inconnu") String pseudo,
     @Default(99) int age,
-    required int score,
+    @Default(0) int score,
     @Default("") String date,
   }) = _User;
   
